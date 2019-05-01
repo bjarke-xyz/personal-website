@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "@emotion/styled";
-import { Header, Footer, UseTitleSetter } from "./components";
+import { Header, Footer, withTitleSetter } from "./components";
 import { Home, Projects, Contact, NotFound } from "./pages";
 
 const Wrapper = styled("div")`
@@ -59,30 +59,14 @@ const App = () => {
           <Header />
           <div>
             <Switch>
-              <Route
-                path="/"
-                exact
-                render={props => (
-                  <UseTitleSetter component={<Home {...props} />} title="Hi" />
-                )}
-              />
+              <Route path="/" exact render={withTitleSetter(Home, "Hi")} />
               <Route
                 path="/projects/"
-                render={props => (
-                  <UseTitleSetter
-                    component={<Projects {...props} />}
-                    title="Projects"
-                  />
-                )}
+                render={withTitleSetter(Projects, "Projects")}
               />
               <Route
                 path="/contact/"
-                render={props => (
-                  <UseTitleSetter
-                    component={<Contact {...props} />}
-                    title="Contact"
-                  />
-                )}
+                render={withTitleSetter(Contact, "Contact")}
               />
               <Route component={NotFound} />
             </Switch>
