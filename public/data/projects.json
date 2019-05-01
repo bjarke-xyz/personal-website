@@ -1,0 +1,25 @@
+{
+  "websites": [
+    {
+      "description": "Shopping list app/website, that learns from what you write, and autocompletes it next time you add it. API is built with Kotlin, app/website is build with Vue.js. Auto deployment via Travis CI. Backend and database hosted on Heroku, and frontend is hosted on Netlify.",
+      "disabled": false,
+      "img": "shoppingList.png",
+      "name": "Shopping List (2019)",
+      "url": "https://shopping-list-v3.netlify.com/"
+    },
+    {
+      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>.",
+      "disabled": false,
+      "img": "kryptoinfo.png",
+      "name": "crypto_info (2017)",
+      "url": "https://kryptoinfo.herokuapp.com/coins"
+    },
+    {
+      "description": "Website for a bed-and-kitchen in Esbjerg. Most pages are server-side-rendered using PHP and Laravel, though some components like the calendar, and the owner's dashboard, are made using Vue.js. The website features a calendar booking system, that integrates with Airbnb.",
+      "disabled": false,
+      "img": "overnatning.png",
+      "name": "Overnatning i Esbjerg (2014-2019)",
+      "url": "http://www.overnatningiesbjerg.dk"
+    }
+  ]
+}
