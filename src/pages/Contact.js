@@ -1,6 +1,5 @@
 import React from "react";
 export const Contact = props => {
-  document.title = `Contact ${props.title}`;
   return (
     <section>
       <h2>Contact</h2>

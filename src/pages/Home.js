@@ -32,7 +32,6 @@ const Socials = () => (
 );
 
 export const Home = props => {
-  document.title = `Hi ${props.title}`;
   return (
     <section>
       <h2>Hi</h2>

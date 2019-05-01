@@ -5,4 +5,5 @@ export * from "./ThemeSwitcherEmoji";
 export * from "./Icon";
 export * from "./Project";
 export * from "./useFetcher";
+export * from "./UseTitleSetter";
 export * from "./Fetcher";

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "@emotion/styled";
-import { Header, Footer } from "./components";
+import { Header, Footer, UseTitleSetter } from "./components";
 import { Home, Projects, Contact, NotFound } from "./pages";
 
 const Wrapper = styled("div")`
@@ -51,8 +51,6 @@ const Container = styled("div")`
   margin-left: auto;
 `;
 
-const baseTitle = "| Bjarke Tobiesen";
-
 const App = () => {
   return (
     <Wrapper>
@@ -64,15 +62,27 @@ const App = () => {
               <Route
                 path="/"
                 exact
-                render={props => <Home {...props} title={baseTitle} />}
+                render={props => (
+                  <UseTitleSetter component={<Home {...props} />} title="Hi" />
+                )}
               />
               <Route
                 path="/projects/"
-                render={props => <Projects {...props} title={baseTitle} />}
+                render={props => (
+                  <UseTitleSetter
+                    component={<Projects {...props} />}
+                    title="Projects"
+                  />
+                )}
               />
               <Route
                 path="/contact/"
-                render={props => <Contact {...props} title={baseTitle} />}
+                render={props => (
+                  <UseTitleSetter
+                    component={<Contact {...props} />}
+                    title="Contact"
+                  />
+                )}
               />
               <Route component={NotFound} />
             </Switch>
