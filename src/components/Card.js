@@ -28,8 +28,8 @@ export const Card = props => (
     </h3>
     <div>
       <p dangerouslySetInnerHTML={{ __html: props.description }} />
-      <a href={`/img/${props.img}`}>
-        <img src={`/img/${props.img}`} alt="Project" />
+      <a href={`/static/img/${props.img}`}>
+        <img src={`/static/img/${props.img}`} alt="Project" />
       </a>
     </div>
   </CardContainer>
