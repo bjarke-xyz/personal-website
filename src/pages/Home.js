@@ -31,16 +31,21 @@ const Socials = () => (
   </ul>
 );
 
-export const Home = () => (
-  <section>
-    <h2>Hi</h2>
-    <p>
-      My name is Bjarke Tobiesen. I am currently studying{" "}
-      <a href="https://www.sdu.dk/en/softwareteknologi">Software Technology</a>{" "}
-      at University of Southern Denmark.
-    </p>
-    <StyledHr />
-    <p>Find me on:</p>
-    <Socials />
-  </section>
-);
+export const Home = props => {
+  document.title = `Hi ${props.title}`;
+  return (
+    <section>
+      <h2>Hi</h2>
+      <p>
+        My name is Bjarke Tobiesen. I am currently studying{" "}
+        <a href="https://www.sdu.dk/en/softwareteknologi">
+          Software Technology
+        </a>{" "}
+        at University of Southern Denmark.
+      </p>
+      <StyledHr />
+      <p>Find me on:</p>
+      <Socials />
+    </section>
+  );
+};

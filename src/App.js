@@ -51,6 +51,8 @@ const Container = styled("div")`
   margin-left: auto;
 `;
 
+const baseTitle = "| Bjarke Tobiesen";
+
 const App = () => {
   return (
     <Wrapper>
@@ -59,9 +61,19 @@ const App = () => {
           <Header />
           <div>
             <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/projects/" component={Projects} />
-              <Route path="/contact/" component={Contact} />
+              <Route
+                path="/"
+                exact
+                render={props => <Home {...props} title={baseTitle} />}
+              />
+              <Route
+                path="/projects/"
+                render={props => <Projects {...props} title={baseTitle} />}
+              />
+              <Route
+                path="/contact/"
+                render={props => <Contact {...props} title={baseTitle} />}
+              />
               <Route component={NotFound} />
             </Switch>
           </div>

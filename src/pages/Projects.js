@@ -12,7 +12,8 @@ const renderProjects = projects => {
   );
 };
 
-export const Projects = () => {
+export const Projects = props => {
+  document.title = `Projects ${props.title}`;
   return (
     <div>
       <h2>Projects</h2>
