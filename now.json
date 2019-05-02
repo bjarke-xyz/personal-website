@@ -2,6 +2,7 @@
   "version": 2,
   "name": "personal-website",
   "alias": "bjarkt.now.sh",
+  "public": false,
   "builds": [
     {
       "src": "package.json",
