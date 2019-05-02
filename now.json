@@ -7,9 +7,17 @@
       "src": "package.json",
       "use": "@now/static-build",
       "config": { "distDir": "build" }
+    },
+    {
+      "src": "/server/server.js",
+      "use": "@now/node-server"
     }
   ],
   "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "/server/server.js"
+    },
     {
       "src": "/static/(.*)",
       "headers": { "cache-control": "s-maxage=31536000,immutable" },

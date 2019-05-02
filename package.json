@@ -19,6 +19,7 @@
     "now-dev": "react-scripts start",
     "now-build": "react-scripts build"
   },
+  "proxy": "http://localhost:5000/",
   "eslintConfig": {
     "extends": "react-app"
   },
