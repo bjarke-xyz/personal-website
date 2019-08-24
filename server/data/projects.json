@@ -1,7 +1,8 @@
 {
   "websites": [
     {
-      "description": "This website! Frontend is made with React. Backend with Node.js and Express. Deployed to <a href=\"https://zeit.co\">zeit.co</a>. Click the lightbulb to turn change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>",
+
+      "description": "This website! Frontend is made with React. Backend with Node.js and Express. Deployed to <a href=\"https://zeit.co\">zeit.co</a>. Click the lightbulb to change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>.",
       "disabled": false,
       "img": "personalWebsite.png",
       "name": "Personal Website (2019)",
