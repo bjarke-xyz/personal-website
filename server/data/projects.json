@@ -1,6 +1,13 @@
 {
   "websites": [
     {
+      "description": "This website! Frontend is made with React. Backend with Node.js and Express. Deployed to https://zeit.co. Click the lightbulb to turn change the theme. Source code available on GitHub: https://github.com/bjarkt/personal-website",
+      "disabled": false,
+      "img": "personalWebsite.png",
+      "name": "Personal Website (2019)",
+      "url": "https://bjarkt.now.sh/"
+    },
+    {
       "description": "Shopping list app/website, that learns from what you write, and autocompletes it next time you add it. API is built with Kotlin, app/website is build with Vue.js. Auto deployment via Travis CI. Backend and database hosted on Heroku, and frontend is hosted on Netlify.",
       "disabled": false,
       "img": "shoppingList.png",
