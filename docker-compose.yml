@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  backend:
+    image: bjarkt/personal-website:backend
+    build:
+      context: ./backend
+    environment:
+      - PORT=7000
+    ports:
+      - "7000:7000"
+
+  frontend:
+    image: bjarkt/personal-website:frontend
+    build:
+      context: ./frontend
+    ports:
+      - "8081:80"

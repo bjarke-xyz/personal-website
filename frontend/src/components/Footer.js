@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeSwitcherEmoji } from "./";
+import { ThemeSwitcherEmoji } from ".";
 import styled from "@emotion/styled-base";
 
 const FooterContainer = styled("footer")`
