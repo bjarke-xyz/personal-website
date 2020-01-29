@@ -21,17 +21,17 @@ function main() {
 }
 
 function backendDeploy() {
-    docker-compose build backend
-    docker-compose push backend
+    ./scripts/docker-compose.sh prod build backend
+    ./scripts/docker-compose.sh prod push backend
 }
 
 function frontendDeploy() {
-    docker-compose build frontend
-    docker-compose push frontend
+    ./scripts/docker-compose.sh prod build frontend
+    ./scripts/docker-compose.sh prod push frontend
 }
 
 function sshCommand() {
-    ssh vps "cd src/personal-website && git reset --hard && git pull origin master && docker-compose down && docker-compose pull && docker-compose up -d"
+    ssh vps "cd src/personal-website && git reset --hard && git pull origin master && ./scripts/docker-compose.sh prod down && ./scripts/docker-compose.sh prod pull && ./scripts/docker-compose.sh prod up -d"
 }
 
 

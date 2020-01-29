@@ -7,8 +7,6 @@ services:
       context: ./backend
     environment:
       - PORT=7000
-    ports:
-      - "7000:7000"
 
   frontend:
     image: bjarkt/personal-website:frontend
