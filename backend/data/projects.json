@@ -25,7 +25,7 @@
       "description": "Website for a bed-and-kitchen in Esbjerg. Most pages are server-side-rendered using PHP and Laravel, though some components like the calendar, and the owner's dashboard, are made using Vue.js. The website features a calendar booking system, that integrates with Airbnb.",
       "disabled": false,
       "img": "overnatning.png",
-      "name": "Overnatning i Esbjerg (2014-2019)",
+      "name": "Overnatning i Esbjerg (2014-2020)",
       "url": "http://www.overnatningiesbjerg.dk"
     }
   ]
