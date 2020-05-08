@@ -1,2 +1,2 @@
-git submodule update --init --recursive 
-./devops/docker-compose.sh prod build  && ./devops/docker-compose.sh prod down  && ./devops/docker-compose.sh prod up -d
+#!/usr/bin/env bash
+docker-compose -f docker-compose-prod.yml build && docker-compose -f docker-compose-prod.yml down && docker-compose -f docker-compose-prod.yml up -d
