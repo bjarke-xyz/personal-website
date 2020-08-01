@@ -1,0 +1,32 @@
+{
+  "websites": [
+    {
+      "description": "This website! Frontend is made with Next.js and React. Click the sun emoji to change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>.",
+      "disabled": false,
+      "img": "personalWebsite.png",
+      "name": "Personal Website (2019-)",
+      "url": "https://bjarkt.com"
+    },
+    {
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API is built with ASP.NET Core, app/website is build with React. Everything running on Docker.",
+      "disabled": false,
+      "img": "shoppingList.png",
+      "name": "Shopping List (2019-)",
+      "url": "https://sl.bjarkt.com/"
+    },
+    {
+      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>.",
+      "disabled": false,
+      "img": "kryptoinfo.png",
+      "name": "crypto_info (2017)",
+      "url": "https://kryptoinfo.herokuapp.com/coins"
+    },
+    {
+      "description": "Website for a bed-and-kitchen in Esbjerg. Most pages are server-side-rendered using PHP and Laravel, though some components like the calendar, and the owner's dashboard, are made using Vue.js. The website features a calendar booking system, that integrates with Airbnb. No longer online.",
+      "disabled": false,
+      "img": "overnatning.png",
+      "name": "Overnatning i Esbjerg (2014-2020)",
+      "url": "http://www.overnatningiesbjerg.dk"
+    }
+  ]
+}
