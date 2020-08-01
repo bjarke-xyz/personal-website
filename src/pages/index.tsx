@@ -1,7 +1,5 @@
 import Layout from "../components/layout";
 import { EmailIcon, GitHubIcon, LinkedInIcon } from "../components/icon";
-import { GetStaticProps } from "next";
-import Head from "next/head";
 
 export default function Home() {
   return (
@@ -34,22 +32,16 @@ const Socials = () => (
       }
     `}</style>
     <ul>
-      <li>
+      <li title="Email">
         <a href="mailto:bjarke.tobiesen@gmail.com">
           <EmailIcon />
           <span>bjarke.tobiesen@gmail.com</span>
         </a>
       </li>
-      <li>
+      <li title="GitHub">
         <a href="https://github.com/bjarkt">
           <GitHubIcon />
           <span>bjarkt</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/bjarke-tobiesen">
-          <LinkedInIcon />
-          <span>bjarke-tobiesen</span>
         </a>
       </li>
     </ul>

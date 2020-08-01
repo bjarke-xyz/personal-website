@@ -4,7 +4,6 @@ import { promisify } from "util";
 import path from "path";
 import Layout from "../components/layout";
 import styles from "./projects.module.scss";
-import Head from "next/head";
 
 export default function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
@@ -15,8 +14,7 @@ export default function Projects({ projects }: InferGetStaticPropsType<typeof ge
   );
 }
 
-function renderProject(project: WebsiteProject) {
-  const { url, description, img, name } = project;
+function renderProject({ url, description, img, name }: WebsiteProject) {
   return (
     <div className={styles.projectContainer} key={url}>
       <h3>
@@ -31,8 +29,6 @@ function renderProject(project: WebsiteProject) {
     </div>
   );
 }
-
-function DisplayProject(projects: ProjectCollection) {}
 
 interface WebsiteProject {
   description: string;

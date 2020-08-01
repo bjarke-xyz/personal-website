@@ -2,6 +2,7 @@ import Head from "next/head";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "../hooks/theme-context";
 import "../styles/globals.scss";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
