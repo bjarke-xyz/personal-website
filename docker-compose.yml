@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  frontend:
+    image: bjarkt/personal-website:frontend
+    build:
+      context: ./src
+    ports:
+      - "8081:80"
