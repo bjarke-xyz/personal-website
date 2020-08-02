@@ -1,0 +1,10 @@
+.navbar {
+  margin-bottom: 1em;
+  a {
+    color: var(--body);
+    margin-right: 10px;
+  }
+  .isActive {
+    color: var(--highlight);
+  }
+}

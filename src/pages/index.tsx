@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import { EmailIcon, GitHubIcon, LinkedInIcon } from "../components/icon";
+import { Layout } from "../components/layout";
+import { EmailIcon, GitHubIcon } from "../components/icon";
 
 export default function Home() {
   return (

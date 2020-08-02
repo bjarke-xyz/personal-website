@@ -1,26 +1,26 @@
 import React from "react";
 
-interface IThemeContext {
+interface ThemeContext {
   dark: boolean;
   toggle: () => void;
 }
-const defaultContextData: IThemeContext = {
+
+const defaultContextData: ThemeContext = {
   dark: false,
   toggle: () => {},
 };
 
-const ThemeContext = React.createContext(defaultContextData);
-const useTheme = () => React.useContext(ThemeContext);
+const themeContext = React.createContext(defaultContextData);
+const useTheme = () => React.useContext(themeContext);
 
 interface ThemeState {
   dark: boolean;
-  hasThemeMounted: boolean;
 }
 const useEffectDarkMode = (): [ThemeState, React.Dispatch<React.SetStateAction<ThemeState>>] => {
   const [themeState, setThemeState] = React.useState<ThemeState>({
     dark: false,
-    hasThemeMounted: false,
   });
+
   React.useEffect(() => {
     const dark = localStorage.getItem("dark") === "true";
     if (dark) {
@@ -28,7 +28,7 @@ const useEffectDarkMode = (): [ThemeState, React.Dispatch<React.SetStateAction<T
     } else {
       document.documentElement.setAttribute("data-theme", "light");
     }
-    setThemeState({ ...themeState, dark, hasThemeMounted: true });
+    setThemeState({ ...themeState, dark });
   }, []);
 
   return [themeState, setThemeState];
@@ -45,18 +45,18 @@ const ThemeProvider = ({ children }) => {
     } else {
       document.documentElement.setAttribute("data-theme", "light");
     }
-    setThemeState({ ...themeState, dark });
+    setThemeState({ dark });
   };
 
   return (
-    <ThemeContext.Provider
+    <themeContext.Provider
       value={{
         dark: themeState.dark,
         toggle,
       }}
     >
       {children}
-    </ThemeContext.Provider>
+    </themeContext.Provider>
   );
 };
 
