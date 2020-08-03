@@ -1,7 +1,14 @@
 {
   "websites": [
     {
-      "description": "This website! Frontend is made with Next.js and React. Click the sun emoji to change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>.",
+      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>.",
+      "disabled": false,
+      "img": "va.png",
+      "name": "Vejr Aggregator (2020-)",
+      "url": "https://va.bjarkt.com"
+    },
+    {
+      "description": "This website! Made with the React framework <a href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>.",
       "disabled": false,
       "img": "personalWebsite.png",
       "name": "Personal Website (2019-)",
