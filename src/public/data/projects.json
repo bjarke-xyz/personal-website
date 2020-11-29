@@ -5,21 +5,21 @@
       "disabled": false,
       "img": "va.png",
       "name": "Vejr Aggregator (2020-)",
-      "url": "https://va.bjarkt.com"
+      "url": "https://va.bjarke.xyz"
     },
     {
       "description": "This website! Made with the React framework <a href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme. Source code available on <a href=\"https://github.com/bjarkt/personal-website\">GitHub</a>.",
       "disabled": false,
       "img": "personalWebsite.png",
       "name": "Personal Website (2019-)",
-      "url": "https://bjarkt.com"
+      "url": "https://bjarke.xyz"
     },
     {
       "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API is built with ASP.NET Core, app/website is build with React. Everything running on Docker.",
       "disabled": false,
       "img": "shoppingList.png",
       "name": "Shopping List (2019-)",
-      "url": "https://sl.bjarkt.com/"
+      "url": "https://sl.bjarke.xyz/"
     },
     {
       "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>.",
