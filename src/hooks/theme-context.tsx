@@ -25,21 +25,13 @@ const useEffectDarkMode = (): [
   });
 
   React.useEffect(() => {
-    // const darkFromStorage = localStorage.getItem("dark") === "true";
     const darkOS = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (darkOS) {
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
     }
-    // if (darkFromStorage || darkOS) {
-    //   document.documentElement.setAttribute("data-theme", "dark");
-    // } else if (lightOS) {
-    //   document.documentElement.setAttribute("data-theme", "light");
-    // } else {
-    //   document.documentElement.setAttribute("data-theme", "light");
-    // }
-    // setThemeState({ ...themeState, dark: darkFromStorage });
+    setThemeState({ ...themeState, dark: darkOS });
   }, []);
 
   return [themeState, setThemeState];
@@ -50,7 +42,6 @@ const ThemeProvider = ({ children }) => {
 
   const toggle = () => {
     const dark = !themeState.dark;
-    localStorage.setItem("dark", JSON.stringify(dark));
     if (dark) {
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
