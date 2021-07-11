@@ -22,12 +22,17 @@ export const Layout = ({ children, home, title }: LayoutProps) => (
 
 const Footer = () => {
   const { dark, toggle } = useTheme();
-  const buttonLabel = dark ? "Switch to light mode" : "Switch to dark mode";
   return (
     <footer className={styles.footer}>
-      <div>{/* © <DateFormatter formatStr="yyyy" /> <a href="/">Bjarke Tobiesen</a> */}</div>
       <div>
-        <span className="cursor-pointer" title={buttonLabel} onClick={toggle}>
+        {/* © <DateFormatter formatStr="yyyy" /> <a href="/">Bjarke Tobiesen</a> */}
+      </div>
+      <div>
+        <span
+          className="cursor-pointer"
+          title={dark ? "Switch to light mode" : "Switch to dark mode"}
+          onClick={toggle}
+        >
           {dark ? "🌚" : "🌞"}
         </span>
       </div>
