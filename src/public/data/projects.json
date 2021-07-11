@@ -1,7 +1,7 @@
 {
   "websites": [
     {
-      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>.",
+      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>. Source code available on <a href=\"https://github.com/bjarkt/va\">GitHub</a>.",
       "disabled": false,
       "img": "va.png",
       "name": "Vejr Aggregator (2020-)",
