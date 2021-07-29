@@ -15,7 +15,7 @@
       "url": "https://bjarke.xyz"
     },
     {
-      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website is build with React. Everything running on Docker Swarm.",
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website was created with React and TypeScript. Everything running on Docker Swarm.",
       "disabled": false,
       "img": "slv4.png",
       "name": "Shopping List (2019-)",
