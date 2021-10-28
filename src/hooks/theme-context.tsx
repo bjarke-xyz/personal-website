@@ -25,13 +25,28 @@ const useEffectDarkMode = (): [
   });
 
   React.useEffect(() => {
-    const darkOS = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (darkOS) {
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
+    function setTheme(prefersDarkColorScheme: MediaQueryList) {
+      const darkOS = prefersDarkColorScheme.matches;
+      if (darkOS) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+      setThemeState({ ...themeState, dark: darkOS });
     }
-    setThemeState({ ...themeState, dark: darkOS });
+    const prefersDarkColorScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    setTheme(prefersDarkColorScheme);
+    const eventListenerHandler = () => setTheme(prefersDarkColorScheme);
+    prefersDarkColorScheme.addEventListener("change", eventListenerHandler);
+
+    return function cleanup() {
+      prefersDarkColorScheme.removeEventListener(
+        "change",
+        eventListenerHandler
+      );
+    };
   }, []);
 
   return [themeState, setThemeState];
