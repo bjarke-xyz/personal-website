@@ -20,11 +20,13 @@ jobs:
     steps:
       - name: Deploy to prod
         uses: appleboy/ssh-action@v0.0.7
+        env:
+          SHA: ${{github.sha}}
         with:
           username: ${{ secrets.SSH_DEPLOYMENT_USERNAME }}
           host: ${{ secrets.SSH_DEPLOYMENT_HOST }}
           key: ${{ secrets.SSH_DEPLOYMENT_KEY }}
-          script: cd ${{ secrets.SSH_DEPLOYMENT_PROJECT_DIR }} && git reset --hard && git pull origin master && ${{ secrets.SSH_DEPLOYMENT_PROJECT_DIR }}/deployment.sh --build-arg BUILD_VERSION=$GITHUB_SHA
+          script: cd ${{ secrets.SSH_DEPLOYMENT_PROJECT_DIR }} && git reset --hard && git pull origin master && ${{ secrets.SSH_DEPLOYMENT_PROJECT_DIR }}/deployment.sh --build-arg BUILD_VERSION=$SHA
 
       - name: Notification
         env:
