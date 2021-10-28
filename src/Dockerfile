@@ -1,15 +1,13 @@
 FROM node:14-alpine
 
-
 WORKDIR /app
 
-COPY package.json /app/package.json
-COPY yarn.lock /app/yarn.lock
+COPY package* ./
 
-COPY ./public /app/public
-COPY . /app
+COPY ./public ./public
+COPY . .
 
-RUN yarn
-RUN yarn build
+RUN npm ci
+RUN npm run build
 EXPOSE 80
-CMD yarn start -p 80
+CMD npm start -- -p 80
