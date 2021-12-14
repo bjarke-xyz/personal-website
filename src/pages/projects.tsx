@@ -1,9 +1,16 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { Layout } from "../components/layout";
 import styles from "./projects.module.scss";
-import { getProjects, WebsiteProject, ProjectCollection } from "../lib/projects";
+import {
+  getProjects,
+  WebsiteProject,
+  ProjectCollection,
+} from "../lib/projects";
+import Image from "next/image";
 
-export default function Projects({ projects }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Projects({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout title="Projects">
       <h2>Projects</h2>
@@ -12,14 +19,15 @@ export default function Projects({ projects }: InferGetStaticPropsType<typeof ge
   );
 }
 
-export const getStaticProps: GetStaticProps<{ projects: ProjectCollection }> = async (context) => {
-  const projects = await getProjects();
-  return {
-    props: {
-      projects,
-    },
+export const getStaticProps: GetStaticProps<{ projects: ProjectCollection }> =
+  async (context) => {
+    const projects = await getProjects();
+    return {
+      props: {
+        projects,
+      },
+    };
   };
-};
 
 const renderProject = ({ url, description, img, name }: WebsiteProject) => (
   <div className={styles.projectContainer} key={url}>
@@ -29,7 +37,7 @@ const renderProject = ({ url, description, img, name }: WebsiteProject) => (
     <div>
       <p dangerouslySetInnerHTML={{ __html: description }} />
       <a href={`/img/projects/${img}`}>
-        <img src={`/img/projects/${img}`} alt="Project" />
+        <Image alt={`Screenshot of ${name}`} src={`/img/projects/${img}`} />
       </a>
     </div>
   </div>
