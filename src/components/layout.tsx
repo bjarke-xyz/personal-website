@@ -12,7 +12,11 @@ type LayoutProps = {
 export const Layout = ({ children, home, title }: LayoutProps) => (
   <div className={styles.container}>
     <Head>
-      <title>{title} | Bjarke Tobiesen</title>
+      <title>{title} | Bjarke</title>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
     <Navbar />
     <main>{children}</main>

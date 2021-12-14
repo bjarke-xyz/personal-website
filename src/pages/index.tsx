@@ -11,13 +11,7 @@ export default function Home() {
         }
       `}</style>
       <h2>Hi 👋</h2>
-      <p>
-        My name is Bjarke Tobiesen. I am currently studying{" "}
-        <a href="https://www.sdu.dk/en/softwareteknologi">
-          Software Technology
-        </a>{" "}
-        at University of Southern Denmark.
-      </p>
+      <p>My name is Bjarke.</p>
       <hr />
       <p>Find me on:</p>
       <Socials />
