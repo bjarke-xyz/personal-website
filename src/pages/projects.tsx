@@ -29,15 +29,20 @@ export const getStaticProps: GetStaticProps<{ projects: ProjectCollection }> =
     };
   };
 
-const renderProject = ({ url, description, img, name }: WebsiteProject) => (
+const renderProject = ({ url, description, image, name }: WebsiteProject) => (
   <div className={styles.projectContainer} key={url}>
     <h3>
       <a href={url}>{name}</a>
     </h3>
     <div>
       <p dangerouslySetInnerHTML={{ __html: description }} />
-      <a href={`/img/projects/${img}`}>
-        <Image alt={`Screenshot of ${name}`} src={`/img/projects/${img}`} />
+      <a href={`/img/projects/${image.file}`}>
+        <Image
+          width={image.width}
+          height={image.height}
+          alt={`Screenshot of ${name}`}
+          src={`/img/projects/${image.file}`}
+        />
       </a>
     </div>
   </div>

@@ -4,41 +4,66 @@
       "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>. Source code available on <a href=\"https://github.com/bjarke-xyz/va\">GitHub</a>.",
       "disabled": false,
       "img": "va.png",
+      "image": {
+        "file": "va.png",
+        "width": 300,
+        "height": 231
+      },
       "name": "Vejr Aggregator (2020-)",
       "url": "https://va.bjarke.xyz"
     },
     {
       "description": "This website! Made with the React framework <a href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme. Source code available on <a href=\"https://github.com/bjark-xyz/personal-website\">GitHub</a>.",
       "disabled": false,
-      "img": "personalWebsite.png",
+      "image": {
+        "file": "personalWebsite.png",
+        "width": 300,
+        "height": 252
+      },
       "name": "Personal Website (2019-)",
       "url": "https://bjarke.xyz"
     },
     {
       "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website was created with React and TypeScript. Everything running on Docker Swarm.",
       "disabled": false,
-      "img": "slv4.png",
+      "image": {
+        "file": "slv4.png",
+        "width": 300,
+        "height": 534
+      },
       "name": "Shopping List (2019-)",
       "url": "https://slv4.bjarke.xyz/"
     },
     {
       "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>.",
       "disabled": false,
-      "img": "kryptoinfo.png",
+      "image": {
+        "file": "kryptoinfo.png",
+        "width": 300,
+        "height": 292
+      },
       "name": "crypto_info (2017)",
       "url": "https://kryptoinfo.herokuapp.com/coins"
     },
     {
       "description": "Website featuring a gallery of the owner's painted pictures, various audio files, and more. Also includes an admin panel for managing the image gallery and audio files. Techonologies used: PHP/Laravel, MySQL",
       "disabled": false,
-      "img": "clairvoyanceogkunst_ny.png",
+      "image": {
+        "file": "clairvoyanceogkunst_ny.png",
+        "width": 300,
+        "height": 230
+      },
       "name": "Clairvoyance og kunst (2014-)",
       "url": "https://www.clairvoyanceogkunst.dk/"
     },
     {
       "description": "Website for a bed-and-kitchen in Esbjerg. Most pages are server-side-rendered using PHP and Laravel, though some components like the calendar, and the owner's dashboard, are made using Vue.js. The website features a calendar booking system, that integrates with Airbnb. No longer online.",
       "disabled": false,
-      "img": "overnatning.png",
+      "image": {
+        "file": "overnatning.png",
+        "width": 300,
+        "height": 292
+      },
       "name": "Overnatning i Esbjerg (2014-2020)",
       "url": "https://web.archive.org/web/20200131000531/http://overnatningiesbjerg.dk:80/"
     }
