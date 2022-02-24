@@ -1,12 +1,13 @@
+import { parseISO } from "date-fns";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Image from "next/image";
 import { Layout } from "../components/layout";
-import styles from "./projects.module.scss";
 import {
   getProjects,
-  WebsiteProject,
   ProjectCollection,
+  WebsiteProject,
 } from "../lib/projects";
-import Image from "next/image";
+import styles from "./projects.module.scss";
 
 export default function Projects({
   projects,
@@ -19,20 +20,37 @@ export default function Projects({
   );
 }
 
-export const getStaticProps: GetStaticProps<{ projects: ProjectCollection }> =
-  async (context) => {
-    const projects = await getProjects();
-    return {
-      props: {
-        projects,
-      },
-    };
+export const getStaticProps: GetStaticProps<{
+  projects: ProjectCollection;
+}> = async (context) => {
+  const projects = await getProjects();
+  return {
+    props: {
+      projects,
+    },
   };
+};
 
-const renderProject = ({ url, description, image, name }: WebsiteProject) => (
+const formatName = (name: string, dates: WebsiteProject["dates"]) => {
+  const from = parseISO(dates.from);
+  let dateStr = `${from.getFullYear()}`;
+  if (dates.to) {
+    const to = parseISO(dates.to);
+    dateStr = `${dateStr} - ${to.getFullYear()}`;
+  }
+  return `${name} (${dateStr})`;
+};
+
+const renderProject = ({
+  url,
+  description,
+  image,
+  name,
+  dates,
+}: WebsiteProject) => (
   <div className={styles.projectContainer} key={url}>
     <h3>
-      <a href={url}>{name}</a>
+      <a href={url}>{formatName(name, dates)}</a>
     </h3>
     <div>
       <p dangerouslySetInnerHTML={{ __html: description }} />

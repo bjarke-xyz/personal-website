@@ -20,6 +20,10 @@ export interface WebsiteProject {
     width: number;
     height: number;
   };
+  dates: {
+    from: string;
+    to: string;
+  };
   name: string;
   url: string;
 }

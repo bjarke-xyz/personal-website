@@ -9,7 +9,10 @@
         "width": 300,
         "height": 231
       },
-      "name": "Vejr Aggregator (2020-)",
+      "dates": {
+        "from": "2020-06-27T21:18:00+2"
+      },
+      "name": "Vejr Aggregator",
       "url": "https://va.bjarke.xyz"
     },
     {
@@ -20,7 +23,10 @@
         "width": 300,
         "height": 252
       },
-      "name": "Personal Website (2019-)",
+      "dates": {
+        "from": "2019-04-30T21:51:00+2"
+      },
+      "name": "Personal Website",
       "url": "https://bjarke.xyz"
     },
     {
@@ -31,7 +37,10 @@
         "width": 300,
         "height": 534
       },
-      "name": "Shopping List (2019-)",
+      "dates": {
+        "from": "2019-03-14T19:06:00+1"
+      },
+      "name": "Shopping List",
       "url": "https://slv4.bjarke.xyz/"
     },
     {
@@ -42,7 +51,10 @@
         "width": 300,
         "height": 292
       },
-      "name": "crypto_info (2017)",
+      "dates": {
+        "from": "2017-12-27T22:30:00+1"
+      },
+      "name": "crypto_info",
       "url": "https://kryptoinfo.herokuapp.com/coins"
     },
     {
@@ -53,18 +65,25 @@
         "width": 300,
         "height": 230
       },
-      "name": "Clairvoyance og kunst (2014-)",
+      "dates": {
+        "from": "2013-11-17T18:35:00+1"
+      },
+      "name": "Clairvoyance og kunst",
       "url": "https://www.clairvoyanceogkunst.dk/"
     },
     {
-      "description": "Website for a bed-and-kitchen in Esbjerg. Most pages are server-side-rendered using PHP and Laravel, though some components like the calendar, and the owner's dashboard, are made using Vue.js. The website features a calendar booking system, that integrates with Airbnb. No longer online.",
+      "description": "Website for a bed-and-kitchen in Esbjerg. Initially created using only HTML, CSS and JS, later re-written using a home made MVC framework in PHP, then re-written again to use the PHP framework Laravel. The website featured a booking calendar, that displayed both the bookings made directly to the owner, and also bookings made on Airbnb, by parsing Airbnbs iCal data. The calendar and the owners private dashboard were made using Vue.js. No longer online.",
       "disabled": false,
       "image": {
         "file": "overnatning.png",
         "width": 300,
         "height": 292
       },
-      "name": "Overnatning i Esbjerg (2014-2020)",
+      "dates": {
+        "from": "2014-02-20T17:51:00+1",
+        "to": "2020-03-01T12:00:00+1"
+      },
+      "name": "Overnatning i Esbjerg",
       "url": "https://web.archive.org/web/20200131000531/http://overnatningiesbjerg.dk:80/"
     }
   ]
