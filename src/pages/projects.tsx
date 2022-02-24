@@ -77,11 +77,10 @@ function TimelineItem({
       return (
         <>
           <time dateTime={time.toISOString()} title={time.toISOString()}>
-            {" "}
             {format(time, formatStr)}
           </time>
+          {" - "}
           <time dateTime={end.toISOString()} title={time.toISOString()}>
-            {" "}
             {format(end, formatStr)}
           </time>
         </>
