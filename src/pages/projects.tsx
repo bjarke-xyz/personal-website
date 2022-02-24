@@ -1,21 +1,25 @@
-import { parseISO } from "date-fns";
+import { format, parse, parseISO } from "date-fns";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Image from "next/image";
 import { Layout } from "../components/layout";
-import {
-  getProjects,
-  ProjectCollection,
-  WebsiteProject,
-} from "../lib/projects";
+import { getProjects, ProjectCollection } from "../lib/projects";
+import { orderBy } from "lodash";
 import styles from "./projects.module.scss";
+import Image from "next/image";
 
-export default function Projects({
+export default function Projects2({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const timelineItems: TimelineItem[] = projects.websites.map((x) => ({
+    time: parseISO(x.dates.from),
+    url: x.url,
+    end: x.dates.to ? parseISO(x.dates.to) : null,
+    description: x.description,
+    title: x.name,
+    image: x.image,
+  }));
   return (
     <Layout title="Projects">
-      <h2>Projects</h2>
-      {projects.websites.map(renderProject)}
+      <Timeline items={timelineItems} />
     </Layout>
   );
 }
@@ -31,37 +35,83 @@ export const getStaticProps: GetStaticProps<{
   };
 };
 
-const formatName = (name: string, dates: WebsiteProject["dates"]) => {
-  const from = parseISO(dates.from);
-  let dateStr = `${from.getFullYear()}`;
-  if (dates.to) {
-    const to = parseISO(dates.to);
-    dateStr = `${dateStr} - ${to.getFullYear()}`;
-  }
-  return `${name} (${dateStr})`;
-};
+interface TimelineItem {
+  title: string;
+  url: string;
+  description: string;
+  time: Date;
+  end: Date | null;
+  image: ProjectCollection["websites"][0]["image"];
+}
 
-const renderProject = ({
-  url,
-  description,
-  image,
-  name,
-  dates,
-}: WebsiteProject) => (
-  <div className={styles.projectContainer} key={url}>
-    <h3>
-      <a href={url}>{formatName(name, dates)}</a>
-    </h3>
-    <div>
-      <p dangerouslySetInnerHTML={{ __html: description }} />
-      <a href={`/img/projects/${image.file}`}>
-        <Image
-          width={image.width}
-          height={image.height}
-          alt={`Screenshot of ${name}`}
-          src={`/img/projects/${image.file}`}
+function Timeline({ items }: { items: TimelineItem[] }) {
+  return (
+    <ul className={styles.timeline}>
+      {orderBy(items, (x) => x.time, "desc").map((item, i) => (
+        <TimelineItem
+          key={item.url}
+          item={item}
+          direction={i % 2 === 0 ? "l" : "r"}
         />
-      </a>
-    </div>
-  </div>
-);
+      ))}
+    </ul>
+  );
+}
+
+function TimelineItem({
+  item,
+  direction,
+}: {
+  item: TimelineItem;
+  direction: "l" | "r";
+}) {
+  const formatTime = (time: Date, end: Date | null) => {
+    const formatStr = "MMM yyyy";
+    if (!end) {
+      return (
+        <time dateTime={time.toISOString()} title={time.toISOString()}>
+          {format(time, formatStr)}
+        </time>
+      );
+    } else {
+      return (
+        <>
+          <time dateTime={time.toISOString()} title={time.toISOString()}>
+            {" "}
+            {format(time, formatStr)}
+          </time>
+          <time dateTime={end.toISOString()} title={time.toISOString()}>
+            {" "}
+            {format(end, formatStr)}
+          </time>
+        </>
+      );
+    }
+  };
+  return (
+    <li>
+      <div className={styles[`direction-${direction}`]}>
+        <div className={styles["flag-wrapper"]}>
+          <span className={styles.hexa}></span>
+          <span className={styles.flag}>
+            <a href={item.url}>{item.title}</a>
+          </span>
+          <span className={styles.time}>{formatTime(item.time, item.end)}</span>
+        </div>
+        <div className={styles.desc}>
+          <a href={`/img/projects/${item.image.file}`}>
+            <Image
+              className={styles.image}
+              width={item.image.width}
+              height={item.image.height}
+              alt={`Screenshot of ${item.title}`}
+              src={`/img/projects/${item.image.file}`}
+            />
+          </a>
+          <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+        </div>
+        <div></div>
+      </div>
+    </li>
+  );
+}

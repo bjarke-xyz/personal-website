@@ -1,16 +1,19 @@
 :root {
   --white: #f8f8f8;
   --black: #282a36;
+  --black-alt: #44475a;
   --gray: #f7fff7;
   --highlight-alt: #339933;
 
   --background: var(--gray);
   --body: var(--black);
+  --body-alt: var(--white);
   --highlight: #4ecdc4;
 }
 
 [data-theme="dark"] {
   --background: var(--black);
   --body: var(--white);
+  --body-alt: var(--black-alt);
   --highlight: #5af78e;
 }
