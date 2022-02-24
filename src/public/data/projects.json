@@ -1,6 +1,20 @@
 {
   "websites": [
     {
+      "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Source code available on <a href=\"https://github.com/bjarke-xyz/timetracker\">GitHub</a>.",
+      "disabled": false,
+      "image": {
+        "file": "timetracker.png",
+        "width": 383,
+        "height": 316
+      },
+      "dates": {
+        "from": "2021-04-16T18:22:00+2"
+      },
+      "name": "Timetracker",
+      "url": "https://timetracker.bjarke.xyz"
+    },
+    {
       "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>. Source code available on <a href=\"https://github.com/bjarke-xyz/va\">GitHub</a>.",
       "disabled": false,
       "img": "va.png",
