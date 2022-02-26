@@ -29,9 +29,9 @@ const Socials = () => (
     `}</style>
     <ul>
       <li title="Email">
-        <a href="mailto:bjarke.tobiesen@gmail.com">
+        <a href="mailto:hey@bjarke.xyz">
           <EmailIcon />
-          <span>bjarke.tobiesen@gmail.com</span>
+          <span>hey@bjarke.xyz</span>
         </a>
       </li>
       <li title="GitHub">
