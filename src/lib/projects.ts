@@ -25,7 +25,10 @@ export interface WebsiteProject {
     to: string;
   };
   name: string;
-  url: string;
+  urls: {
+    main: string;
+    github?: string;
+  };
 }
 export interface ProjectCollection {
   websites: WebsiteProject[];

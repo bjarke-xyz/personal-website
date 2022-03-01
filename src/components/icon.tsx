@@ -18,3 +18,26 @@ export const LinkedInIcon = () => (
     <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" />
   </svg>
 );
+
+export const ExternalLinkIcon = () => (
+  <svg className={styles.iconContainer} viewBox="0 0 24 24">
+    <path d="M 3 3 L 3 21 L 21 21 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 3 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z" />
+  </svg>
+);
+
+export const Icon = ({ name }: { name: string }) => {
+  switch (name.toUpperCase()) {
+    case "EMAIL":
+      return EmailIcon();
+    case "GITHUB":
+      return GitHubIcon();
+    case "LINKEDIN":
+      return LinkedInIcon();
+    case "MAIN":
+    case "EXTERNALLINK":
+      return ExternalLinkIcon();
+    default:
+      return <>{name}</>;
+    // throw new Error(`Icon not found '${name}'`);
+  }
+};

@@ -5,13 +5,14 @@ import { getProjects, ProjectCollection } from "../lib/projects";
 import { orderBy } from "lodash";
 import styles from "./projects.module.scss";
 import Image from "next/image";
+import { GitHubIcon, Icon } from "../components/icon";
 
 export default function Projects2({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const timelineItems: TimelineItem[] = projects.websites.map((x) => ({
     time: parseISO(x.dates.from),
-    url: x.url,
+    urls: x.urls,
     end: x.dates.to ? parseISO(x.dates.to) : null,
     description: x.description,
     title: x.name,
@@ -37,7 +38,7 @@ export const getStaticProps: GetStaticProps<{
 
 interface TimelineItem {
   title: string;
-  url: string;
+  urls: ProjectCollection["websites"][0]["urls"];
   description: string;
   time: Date;
   end: Date | null;
@@ -49,7 +50,7 @@ function Timeline({ items }: { items: TimelineItem[] }) {
     <ul className={styles.timeline}>
       {orderBy(items, (x) => x.time, "desc").map((item, i) => (
         <TimelineItem
-          key={item.url}
+          key={item.urls.main}
           item={item}
           direction={i % 2 === 0 ? "l" : "r"}
         />
@@ -58,6 +59,29 @@ function Timeline({ items }: { items: TimelineItem[] }) {
   );
 }
 
+const formatTime = (time: Date, end: Date | null) => {
+  const formatStr = "MMM yyyy";
+  if (!end) {
+    return (
+      <time dateTime={time.toISOString()} title={time.toISOString()}>
+        {format(time, formatStr)}
+      </time>
+    );
+  } else {
+    return (
+      <>
+        <time dateTime={time.toISOString()} title={time.toISOString()}>
+          {format(time, formatStr)}
+        </time>
+        {" - "}
+        <time dateTime={end.toISOString()} title={time.toISOString()}>
+          {format(end, formatStr)}
+        </time>
+      </>
+    );
+  }
+};
+
 function TimelineItem({
   item,
   direction,
@@ -65,36 +89,15 @@ function TimelineItem({
   item: TimelineItem;
   direction: "l" | "r";
 }) {
-  const formatTime = (time: Date, end: Date | null) => {
-    const formatStr = "MMM yyyy";
-    if (!end) {
-      return (
-        <time dateTime={time.toISOString()} title={time.toISOString()}>
-          {format(time, formatStr)}
-        </time>
-      );
-    } else {
-      return (
-        <>
-          <time dateTime={time.toISOString()} title={time.toISOString()}>
-            {format(time, formatStr)}
-          </time>
-          {" - "}
-          <time dateTime={end.toISOString()} title={time.toISOString()}>
-            {format(end, formatStr)}
-          </time>
-        </>
-      );
-    }
-  };
+  const urls = Object.keys(item.urls)
+    // .filter((x) => x !== "main")
+    .map((x) => ({ name: x, url: item.urls[x] as string }));
   return (
     <li>
       <div className={styles[`direction-${direction}`]}>
         <div className={styles["flag-wrapper"]}>
           <span className={styles.hexa}></span>
-          <span className={styles.flag}>
-            <a href={item.url}>{item.title}</a>
-          </span>
+          <span className={styles.flag}>{item.title}</span>
           <span className={styles.time}>{formatTime(item.time, item.end)}</span>
         </div>
         <div className={styles.desc}>
@@ -108,6 +111,17 @@ function TimelineItem({
             />
           </a>
           <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+          {urls.length > 0 ? (
+            <div className={`${styles.tags} ${styles[`tags-${direction}`]}`}>
+              {urls.map((u) => (
+                <span key={u.url} className={styles.tag}>
+                  <a target="_blank" href={u.url}>
+                    <Icon name={u.name} />
+                  </a>
+                </span>
+              ))}
+            </div>
+          ) : null}
         </div>
         <div></div>
       </div>
