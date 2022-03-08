@@ -4,7 +4,7 @@ import { Layout } from "../components/layout";
 import { getProjects, ProjectCollection } from "../lib/projects";
 import { orderBy } from "lodash";
 import styles from "./projects.module.scss";
-import Image from "next/image";
+import Image, { ImageLoaderProps } from "next/image";
 import { GitHubIcon, Icon } from "../components/icon";
 
 export default function Projects2({
@@ -82,6 +82,14 @@ const formatTime = (time: Date, end: Date | null) => {
   }
 };
 
+function imageLoader({ src, width, quality }: ImageLoaderProps): any {
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "https://bjarke.xyz";
+  return `${baseUrl}${src}?w=${width}&q=${quality || 75}`;
+}
+
 function TimelineItem({
   item,
   direction,
@@ -89,9 +97,10 @@ function TimelineItem({
   item: TimelineItem;
   direction: "l" | "r";
 }) {
-  const urls = Object.keys(item.urls)
-    // .filter((x) => x !== "main")
-    .map((x) => ({ name: x, url: item.urls[x] as string }));
+  const urls = Object.keys(item.urls).map((x) => ({
+    name: x,
+    url: item.urls[x] as string,
+  }));
   return (
     <li>
       <div className={styles[`direction-${direction}`]}>
@@ -103,6 +112,7 @@ function TimelineItem({
         <div className={styles.desc}>
           <a href={`/img/projects/${item.image.file}`}>
             <Image
+              loader={imageLoader}
               className={styles.image}
               width={item.image.width}
               height={item.image.height}
