@@ -11,6 +11,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           name="keywords"
           content="Portfolio, Software, IT, Ingeniør, Engineer, Website, Programming, Computer, Science"
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "580bfe37627a49448e86f2401b50191f"}'
+        ></script>
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>
