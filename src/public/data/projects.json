@@ -1,7 +1,24 @@
 {
   "websites": [
     {
-      "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer.",
+      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Deployed using <a target=\"_blank\" href=\"https://workers.cloudflare.com/\">Cloudflare Workers</a>.",
+      "disabled": false,
+      "image": {
+        "file": "fuelprices-curl.png",
+        "width": 335,
+        "height": 327
+      },
+      "dates": {
+        "from": "2021-11-17T20:48:00+2"
+      },
+      "name": "Fuelprices",
+      "urls": {
+        "main": "https://fuelprices.bjarke.xyz",
+        "github": "https://github.com/bjarke-xyz/fuelprices"
+      }
+    },
+    {
+      "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
       "image": {
         "file": "timetracker.png",
@@ -18,7 +35,7 @@
       }
     },
     {
-      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, frontend with React and <a href=\"https://watercss.kognise.dev/\">Water.css</a>.",
+      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, deployed to a VPS using Docker Swarm. frontend with React and <a target=\"_blank\" href=\"https://watercss.kognise.dev/\">Water.css</a>, deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
       "img": "va.png",
       "image": {
@@ -36,7 +53,7 @@
       }
     },
     {
-      "description": "This website! Made with the React framework <a href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme.",
+      "description": "This website! Made with the React framework <a target=\"_blank\" href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme. Deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
       "image": {
         "file": "personalWebsite.png",
@@ -53,7 +70,7 @@
       }
     },
     {
-      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website was created with React and TypeScript. Everything running on Docker Swarm.",
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website was created with React and TypeScript. Backend and frontend is deployed using Docker Swarm on a VPS.",
       "disabled": false,
       "image": {
         "file": "slv4.png",
@@ -69,7 +86,7 @@
       }
     },
     {
-      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>.",
+      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a target=\"_blank\" href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>. Deployed using <a target=\"_blank\" href=\"https://www.heroku.com/home\">Heroku</a>.",
       "disabled": false,
       "image": {
         "file": "kryptoinfo.png",
@@ -85,7 +102,7 @@
       }
     },
     {
-      "description": "Website featuring a gallery of the owner's painted pictures, various audio files, and more. Also includes an admin panel for managing the image gallery and audio files. Techonologies used: PHP/Laravel, MySQL",
+      "description": "Website featuring a gallery of the owner's painted pictures, various audio files, and more. Also includes an admin panel for managing the image gallery and audio files. Techonologies used: PHP/Laravel, MySQL.",
       "disabled": false,
       "image": {
         "file": "clairvoyanceogkunst_ny.png",

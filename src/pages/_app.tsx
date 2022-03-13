@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "../hooks/theme-context";
 import "../styles/style.scss";
@@ -11,11 +12,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           name="keywords"
           content="Portfolio, Software, IT, Ingeniør, Engineer, Website, Programming, Computer, Science"
         />
-        <script
+        <Script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "580bfe37627a49448e86f2401b50191f"}'
-        ></script>
+        ></Script>
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>

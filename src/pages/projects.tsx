@@ -106,7 +106,11 @@ function TimelineItem({
       <div className={styles[`direction-${direction}`]}>
         <div className={styles["flag-wrapper"]}>
           <span className={styles.hexa}></span>
-          <span className={styles.flag}>{item.title}</span>
+          <span className={styles.flag}>
+            <a target="_blank" href={item.urls.main}>
+              {item.title}
+            </a>
+          </span>
           <span className={styles.time}>{formatTime(item.time, item.end)}</span>
         </div>
         <div className={styles.desc}>
