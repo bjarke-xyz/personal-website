@@ -1,7 +1,7 @@
 {
   "websites": [
     {
-      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Deployed using <a target=\"_blank\" href=\"https://workers.cloudflare.com/\">Cloudflare Workers</a>.",
+      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Hosted on AWS, using Lambda, API Gateway, DynamoDB, and S3.",
       "disabled": false,
       "image": {
         "file": "fuelprices-curl.png",
