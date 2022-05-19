@@ -1,7 +1,7 @@
 {
   "websites": [
     {
-      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Hosted on AWS, using Lambda, API Gateway, DynamoDB, and S3.",
+      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Deployed using Cloudflare Workers",
       "disabled": false,
       "image": {
         "file": "fuelprices-curl.png",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "description": "Shows the weather forecast from multiple services. API made with TypesScript and GraphQL, deployed to a VPS using Docker Swarm. frontend with React and <a target=\"_blank\" href=\"https://watercss.kognise.dev/\">Water.css</a>, deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
+      "description": "Shows the weather forecast from multiple sources. API made with TypesScript and GraphQL, deployed using Cloudflare Workers. Frontend with React and <a target=\"_blank\" href=\"https://watercss.kognise.dev/\">Water.css</a>, deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
       "img": "va.png",
       "image": {
