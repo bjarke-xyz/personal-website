@@ -70,12 +70,12 @@
       }
     },
     {
-      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go. app/website was created with React and TypeScript. Backend and frontend is deployed using Docker Swarm on a VPS.",
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, recently rewritten in Go, and deployed as a Docker container on Docker Swarm. Frontend is created using NextJS, Chakra UI, and TypeScript, and is deployed using Cloudflare Pages.",
       "disabled": false,
       "image": {
-        "file": "slv4.png",
-        "width": 300,
-        "height": 534
+        "file": "slv4Ny.png",
+        "width": 198,
+        "height": 402
       },
       "dates": {
         "from": "2019-03-14T19:06:00+1"
