@@ -133,9 +133,9 @@ function TimelineItemLine() {
   return (
     <div className="relative col-start-5 col-end-6 mr-10 md:mx-auto">
       <div className="flex h-full w-6 items-center justify-center">
-        <div className="pointer-events-none h-full w-1 bg-body-alt dark:bg-body-alt-dark"></div>
+        <div className="pointer-events-none h-full w-1 bg-body-alt dark:bg-body-alt-dark "></div>
       </div>
-      <div className="absolute top-1/2 -mt-3 h-6 w-6 rounded-full bg-body-alt shadow dark:bg-body-alt-dark"></div>
+      <div className="absolute top-1/2 -mt-3 h-6 w-6 rounded-full bg-highlight shadow dark:bg-highlight-dark"></div>
     </div>
   );
 }
