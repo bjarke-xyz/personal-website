@@ -2,7 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "../hooks/theme-context";
-import "../styles/style.scss";
+import "../styles/style.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

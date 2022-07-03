@@ -12,9 +12,8 @@ h2 {
   a {
     text-decoration: none;
     @apply text-highlight dark:text-highlight-dark;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
