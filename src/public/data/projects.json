@@ -82,7 +82,8 @@
       },
       "name": "Shopping List",
       "urls": {
-        "main": "https://slv4.bjarke.xyz/"
+        "main": "https://slv4.bjarke.xyz/",
+        "github": "https://github.com/bjarke-xyz/shoppinglist-backend"
       }
     },
     {
