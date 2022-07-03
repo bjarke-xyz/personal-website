@@ -20,10 +20,18 @@ const routes = [
 export const Navbar = () => {
   const router = useRouter();
   return (
-    <div className={styles.navbar}>
+    <div className="mb-4">
       {routes.map((route) => (
         <Link href={route.path} key={route.name}>
-          <a className={router.pathname == route.path ? styles.isActive : ""}>{route.name}</a>
+          <a
+            className={`text-body dark:text-body-dark mr-4 ${
+              router.pathname == route.path
+                ? "text-highlight dark:text-highlight-dark"
+                : ""
+            }`}
+          >
+            {route.name}
+          </a>
         </Link>
       ))}
     </div>

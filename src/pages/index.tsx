@@ -4,15 +4,9 @@ import { EmailIcon, GitHubIcon } from "../components/icon";
 export default function Home() {
   return (
     <Layout title="Hi 👋">
-      <style jsx>{`
-        hr {
-          margin-bottom: 5px;
-          margin-top: 5px;
-        }
-      `}</style>
-      <h2>Hi 👋</h2>
+      <h2 className="text-3xl">Hi 👋</h2>
       <p>My name is Bjarke.</p>
-      <hr />
+      <hr className="my-2" />
       <p>Find me on:</p>
       <Socials />
     </Layout>
@@ -21,21 +15,18 @@ export default function Home() {
 
 const Socials = () => (
   <div>
-    <style jsx>{`
-      a {
-        display: inline-flex;
-        align-items: center;
-      }
-    `}</style>
     <ul>
       <li title="Email">
-        <a href="mailto:hey@bjarke.xyz">
+        <a href="mailto:hey@bjarke.xyz" className="inline-flex items-center">
           <EmailIcon />
           <span>hey@bjarke.xyz</span>
         </a>
       </li>
       <li title="GitHub">
-        <a href="https://github.com/bjarkt">
+        <a
+          href="https://github.com/bjarkt"
+          className="inline-flex items-center"
+        >
           <GitHubIcon />
           <span>bjarkt</span>
         </a>

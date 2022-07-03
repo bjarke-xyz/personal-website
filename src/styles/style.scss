@@ -1,3 +1,20 @@
-@import "theme";
-@import "utils";
-@import "globals";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@layer base {
+  a {
+    text-decoration: none;
+    @apply text-highlight dark:text-highlight-dark;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

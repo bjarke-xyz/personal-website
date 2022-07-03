@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useTheme } from "../hooks/theme-context";
-import styles from "./layout.module.scss";
-import { DateFormatter } from "./date";
 import { Navbar } from "./navbar";
 
 type LayoutProps = {
@@ -10,7 +8,7 @@ type LayoutProps = {
   title: string;
 };
 export const Layout = ({ children, home, title }: LayoutProps) => (
-  <div className={styles.container}>
+  <div className="container mx-auto max-w-4xl px-4 pt-4">
     <Head>
       <title>{title} | Bjarke</title>
     </Head>
@@ -21,19 +19,19 @@ export const Layout = ({ children, home, title }: LayoutProps) => (
 );
 
 const Footer = () => {
-  const { dark, toggle } = useTheme();
+  const { theme, toggle } = useTheme();
   return (
-    <footer className={styles.footer}>
-      <div>
-        {/* © <DateFormatter formatStr="yyyy" /> <a href="/">Bjarke Tobiesen</a> */}
-      </div>
+    <footer className="mt-14 mb-4 flex justify-between text-sm">
+      <div></div>
       <div>
         <span
           className="cursor-pointer"
-          title={dark ? "Switch to light mode" : "Switch to dark mode"}
+          title={"Toggle theme"}
           onClick={toggle}
         >
-          {dark ? "🌚" : "🌞"}
+          {theme === "auto" && "🌓"}
+          {theme === "dark" && "🌚"}
+          {theme === "light" && "🌞"}
         </span>
       </div>
     </footer>
