@@ -24,11 +24,11 @@ const Socials = () => (
       </li>
       <li title="GitHub">
         <a
-          href="https://github.com/bjarkt"
+          href="https://github.com/bjarke-xyz"
           className="inline-flex items-center"
         >
           <GitHubIcon />
-          <span>bjarkt</span>
+          <span>bjarke-xyz</span>
         </a>
       </li>
     </ul>
