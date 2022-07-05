@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import styles from "./navbar.module.scss";
 
 const routes = [
   {
@@ -24,7 +23,7 @@ export const Navbar = () => {
       {routes.map((route) => (
         <Link href={route.path} key={route.name}>
           <a
-            className={`text-body dark:text-body-dark mr-4 ${
+            className={`mr-4 text-body dark:text-body-dark ${
               router.pathname == route.path
                 ? "text-highlight dark:text-highlight-dark"
                 : ""
