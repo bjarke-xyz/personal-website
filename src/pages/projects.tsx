@@ -2,6 +2,7 @@ import { format, parseISO } from "date-fns";
 import { orderBy } from "lodash";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Image, { ImageLoaderProps } from "next/image";
+import { Carousel } from "../components/carousel";
 import { Icon } from "../components/icon";
 import { Layout } from "../components/layout";
 import { getProjects, ProjectCollection } from "../lib/projects";
@@ -43,7 +44,7 @@ interface TimelineItem {
   description: string;
   time: Date;
   end: Date | null;
-  image: ProjectCollection["websites"][0]["image"];
+  images: ProjectCollection["websites"][0]["images"];
 }
 
 export default function Projects({
@@ -55,7 +56,7 @@ export default function Projects({
     end: x.dates.to ? parseISO(x.dates.to) : null,
     description: x.description,
     title: x.name,
-    image: x.image,
+    images: x.images,
   }));
   return (
     <Layout title="Projects">
@@ -89,6 +90,12 @@ function TimelineItemContent({
     name: x,
     url: item.urls[x] as string,
   }));
+  const carouselImages = item.images.map((image) => ({
+    src: `/img/projects/${image.file}`,
+    alt: image.alt ?? `Screenshot of ${item.title}`,
+    width: image.width,
+    height: image.height,
+  }));
   return (
     <div className="flex flex-col">
       <h3 className="mb-1 text-xl font-semibold">
@@ -96,16 +103,7 @@ function TimelineItemContent({
       </h3>
       <p className="mb-4 text-sm italic">{formatTime(item.time, item.end)}</p>
       <div className="mb-4 self-center">
-        <a href={`/img/projects/${item.image.file}`}>
-          <Image
-            loader={imageLoader}
-            className="rounded-md"
-            width={item.image.width}
-            height={item.image.height}
-            alt={`Screenshot of ${item.title}`}
-            src={`/img/projects/${item.image.file}`}
-          />
-        </a>
+        <Carousel images={carouselImages} />
       </div>
       <p
         className="mb-4 text-justify leading-tight"
@@ -135,7 +133,7 @@ function TimelineItemLine() {
       <div className="flex h-full w-6 items-center justify-center">
         <div className="pointer-events-none h-full w-1 bg-body-alt dark:bg-body-alt-dark "></div>
       </div>
-      <div className="absolute top-1/2 -mt-3 h-6 w-6 rounded-full bg-highlight shadow dark:bg-highlight-dark"></div>
+      <div className="absolute top-1/2 -mt-3 h-6 w-6 rounded-full bg-highlight shadow hover:animate-ping dark:bg-highlight-dark"></div>
     </div>
   );
 }

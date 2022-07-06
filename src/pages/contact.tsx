@@ -1,3 +1,4 @@
+import { Carousel } from "../components/carousel";
 import { Layout } from "../components/layout";
 
 export default function Contact() {

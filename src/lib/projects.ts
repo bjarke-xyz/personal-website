@@ -15,11 +15,12 @@ export const getProjects = async (): Promise<ProjectCollection> => {
 export interface WebsiteProject {
   description: string;
   disabled: boolean;
-  image: {
+  images: {
     file: string;
     width: number;
     height: number;
-  };
+    alt?: string;
+  }[];
   dates: {
     from: string;
     to: string;

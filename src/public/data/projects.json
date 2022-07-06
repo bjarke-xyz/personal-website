@@ -1,13 +1,22 @@
 {
   "websites": [
     {
-      "description": "HTTP API for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. See GitHub README for more information. Deployed using Cloudflare Workers",
+      "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information. Deployed using Cloudflare Workers",
       "disabled": false,
-      "image": {
-        "file": "fuelprices-curl.png",
-        "width": 335,
-        "height": 327
-      },
+      "images": [
+        {
+          "file": "fuelprices-curl.png",
+          "width": 335,
+          "height": 327,
+          "alt": "Screenshot of curl output"
+        },
+        {
+          "file": "fuelprices-website.png",
+          "width": 335,
+          "height": 327,
+          "alt": "Screenshot of fuelprices website"
+        }
+      ],
       "dates": {
         "from": "2021-11-17T20:48:00+2"
       },
@@ -20,11 +29,13 @@
     {
       "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
-      "image": {
-        "file": "timetracker.png",
-        "width": 383,
-        "height": 316
-      },
+      "images": [
+        {
+          "file": "timetracker.png",
+          "width": 383,
+          "height": 316
+        }
+      ],
       "dates": {
         "from": "2021-04-16T18:22:00+2"
       },
@@ -38,11 +49,13 @@
       "description": "Shows the weather forecast from multiple sources. API made with TypesScript and GraphQL, deployed using Cloudflare Workers. Frontend with React and <a target=\"_blank\" href=\"https://watercss.kognise.dev/\">Water.css</a>, deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
       "img": "va.png",
-      "image": {
-        "file": "va.png",
-        "width": 300,
-        "height": 231
-      },
+      "images": [
+        {
+          "file": "va.png",
+          "width": 300,
+          "height": 231
+        }
+      ],
       "dates": {
         "from": "2020-06-27T21:18:00+2"
       },
@@ -55,11 +68,13 @@
     {
       "description": "This website! Made with the React framework <a target=\"_blank\" href=\"https://nextjs.org/\">Next.js</a> and TypeScript. Click the sun emoji to change the theme. Deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
       "disabled": false,
-      "image": {
-        "file": "personalWebsite.png",
-        "width": 300,
-        "height": 252
-      },
+      "images": [
+        {
+          "file": "personalWebsite.png",
+          "width": 300,
+          "height": 252
+        }
+      ],
       "dates": {
         "from": "2019-04-30T21:51:00+2"
       },
@@ -72,11 +87,13 @@
     {
       "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and deployed as a Docker container on Docker Swarm. Frontend is created using NextJS, Chakra UI, and TypeScript, and is deployed using Cloudflare Pages.",
       "disabled": false,
-      "image": {
-        "file": "slv4Ny.png",
-        "width": 198,
-        "height": 402
-      },
+      "images": [
+        {
+          "file": "slv4Ny.png",
+          "width": 198,
+          "height": 402
+        }
+      ],
       "dates": {
         "from": "2019-03-14T19:06:00+1"
       },
@@ -89,11 +106,13 @@
     {
       "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a target=\"_blank\" href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>. Deployed using <a target=\"_blank\" href=\"https://www.heroku.com/home\">Heroku</a>.",
       "disabled": false,
-      "image": {
-        "file": "kryptoinfo.png",
-        "width": 300,
-        "height": 292
-      },
+      "images": [
+        {
+          "file": "kryptoinfo.png",
+          "width": 300,
+          "height": 292
+        }
+      ],
       "dates": {
         "from": "2017-12-27T22:30:00+1"
       },
@@ -105,11 +124,13 @@
     {
       "description": "Website featuring a gallery of the owner's painted pictures, various audio files, and more. Also includes an admin panel for managing the image gallery and audio files. Techonologies used: PHP/Laravel, MySQL.",
       "disabled": false,
-      "image": {
-        "file": "clairvoyanceogkunst_ny.png",
-        "width": 300,
-        "height": 230
-      },
+      "images": [
+        {
+          "file": "clairvoyanceogkunst_ny.png",
+          "width": 300,
+          "height": 230
+        }
+      ],
       "dates": {
         "from": "2013-11-17T18:35:00+1",
         "to": "2022-06-14T10:19:00+2"
@@ -122,11 +143,13 @@
     {
       "description": "Website for a bed-and-kitchen in Esbjerg. Initially created using only HTML, CSS and JS, later re-written using a home made MVC framework in PHP, then re-written again to use the PHP framework Laravel. The website featured a booking calendar, that displayed both the bookings made directly to the owner, and also bookings made on Airbnb, by parsing Airbnbs iCal data. The calendar and the owners private dashboard were made using Vue.js. No longer online.",
       "disabled": false,
-      "image": {
-        "file": "overnatning.png",
-        "width": 300,
-        "height": 292
-      },
+      "images": [
+        {
+          "file": "overnatning.png",
+          "width": 300,
+          "height": 292
+        }
+      ],
       "dates": {
         "from": "2014-02-20T17:51:00+1",
         "to": "2020-03-01T12:00:00+1"
