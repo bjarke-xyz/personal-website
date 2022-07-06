@@ -37,12 +37,12 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div>
-      <div
-        className={`group relative mx-auto`}
-        style={{ height: `${images[0].height}px` }}
-      >
+      <div className={`group relative mx-auto`}>
         {images.map((img, i) => (
-          <div className={`group relative ${i !== index ? "hidden" : ""}`}>
+          <div
+            className={`group relative ${i !== index ? "hidden" : ""}`}
+            key={img.src}
+          >
             <a href={img.src}>
               <Image
                 loader={imageLoader}
@@ -55,8 +55,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
             {moreThanOne && (
               <div className="invisible absolute bottom-2 w-full bg-black/40 px-2 py-2 text-center text-white transition-all group-hover:visible">
                 <div className="flex items-center justify-center space-x-4">
-                  {images.map((_, j) => (
+                  {images.map((jImg, j) => (
                     <div
+                      key={jImg.src}
                       className={`h-4 w-4 cursor-pointer rounded-full  ${
                         j === index
                           ? "bg-highlight dark:bg-highlight-dark"
