@@ -1,6 +1,26 @@
 {
   "websites": [
     {
+      "description": "Re-creation of <a href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Scrapes danish news sites and makes titles searchable using PostgreSQL full text search.",
+      "disabled": false,
+      "images": [
+        {
+          "file": "rasende2.png",
+          "width": 335,
+          "height": 327,
+          "alt": "Screenshot of rasende2"
+        }
+      ],
+      "dates": {
+        "from": "2022-07-14T12:00:00+2"
+      },
+      "name": "Rasende2",
+      "urls": {
+        "main": "https://rasende.bjarke.xyz",
+        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/rasende2"
+      }
+    },
+    {
       "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information. Deployed using Cloudflare Workers",
       "disabled": false,
       "images": [
