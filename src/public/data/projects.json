@@ -43,7 +43,7 @@
       "name": "Fuelprices",
       "urls": {
         "main": "https://fuelprices.bjarke.xyz",
-        "github": "https://github.com/bjarke-xyz/fuelprices"
+        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/fuelpricesapi"
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Shopping List",
       "urls": {
         "main": "https://slv4.bjarke.xyz/",
-        "github": "https://github.com/bjarke-xyz/shoppinglist-backend"
+        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/shoppinglist-backend"
       }
     },
     {
