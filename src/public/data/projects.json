@@ -21,7 +21,7 @@
       }
     },
     {
-      "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information. Deployed using Cloudflare Workers",
+      "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information. Deployed using Kubernetes.",
       "disabled": false,
       "images": [
         {
@@ -105,7 +105,7 @@
       }
     },
     {
-      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and deployed as a Docker container on Docker Swarm. Frontend is created using NextJS, Chakra UI, and TypeScript, and is deployed using Cloudflare Pages.",
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and deployed on Kubernetes. Frontend is created using NextJS, Chakra UI, and TypeScript, and is deployed using Cloudflare Pages.",
       "disabled": false,
       "images": [
         {
