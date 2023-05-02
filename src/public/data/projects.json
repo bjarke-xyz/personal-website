@@ -124,7 +124,7 @@
       }
     },
     {
-      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a target=\"_blank\" href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>. Deployed using <a target=\"_blank\" href=\"https://www.heroku.com/home\">Heroku</a>.",
+      "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a target=\"_blank\" href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>. Deployed using <del><a target=\"_blank\" href=\"https://www.heroku.com/home\">Heroku</a></del> <a target=\"_blank\" href=\"https://fly.io\">Fly.io</a>.",
       "disabled": false,
       "images": [
         {
@@ -134,11 +134,12 @@
         }
       ],
       "dates": {
-        "from": "2017-12-27T22:30:00+1"
+        "from": "2017-12-27T22:30:00+1",
+        "to": "2018-08-08T22:10:00+2"
       },
       "name": "crypto_info",
       "urls": {
-        "main": "https://kryptoinfo.herokuapp.com/coins"
+        "main": "https://crypto-info.fly.dev/coins"
       }
     },
     {
