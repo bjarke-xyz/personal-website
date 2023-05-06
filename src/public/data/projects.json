@@ -17,11 +17,11 @@
       "name": "Rasende2",
       "urls": {
         "main": "https://rasende.bjarke.xyz",
-        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/rasende2"
+        "github": "https://github.com/bjarke-xyz/rasende2-api"
       }
     },
     {
-      "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information. Deployed using Kubernetes.",
+      "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information.",
       "disabled": false,
       "images": [
         {
@@ -43,7 +43,7 @@
       "name": "Fuelprices",
       "urls": {
         "main": "https://fuelprices.bjarke.xyz",
-        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/fuelpricesapi"
+        "github": "https://github.com/bjarke-xyz/fuelprices-api"
       }
     },
     {
@@ -105,7 +105,7 @@
       }
     },
     {
-      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and deployed on Kubernetes. Frontend is created using NextJS, Chakra UI, and TypeScript, and is deployed using Cloudflare Pages.",
+      "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and now written in TypeScript. Frontend is created using Angular.",
       "disabled": false,
       "images": [
         {
@@ -120,7 +120,7 @@
       "name": "Shopping List",
       "urls": {
         "main": "https://slv4.bjarke.xyz/",
-        "github": "https://github.com/bjarke-xyz/go-monorepo/tree/main/services/shoppinglist-backend"
+        "github": "https://github.com/bjarke-xyz/shoppinglist-api"
       }
     },
     {
