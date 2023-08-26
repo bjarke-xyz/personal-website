@@ -1,5 +1,5 @@
 module.exports = {
-  output: "standalone",
+  output: "export",
   images: {
     loader: "custom",
   },
