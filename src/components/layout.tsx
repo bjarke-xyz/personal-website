@@ -7,16 +7,19 @@ type LayoutProps = {
   home?: boolean;
   title: string;
 };
-export const Layout = ({ children, home, title }: LayoutProps) => (
-  <div className="container mx-auto max-w-4xl px-4 pt-4">
-    <Head>
-      <title>{title} | Bjarke</title>
-    </Head>
-    <Navbar />
-    <main>{children}</main>
-    <Footer />
-  </div>
-);
+export const Layout = ({ children, home, title }: LayoutProps) => {
+  const fullTitle = `${title} | Bjarke`;
+  return (
+    <div className="container mx-auto max-w-4xl px-4 pt-4">
+      <Head>
+        <title>{fullTitle}</title>
+      </Head>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
+};
 
 const Footer = () => {
   const { theme, toggle } = useTheme();
