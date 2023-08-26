@@ -99,7 +99,9 @@ function TimelineItemContent({
   return (
     <div className="flex flex-col">
       <h3 className="mb-1 text-xl font-semibold">
-        <a href={item.urls.main}>{item.title}</a>
+        <a target="_blank" href={item.urls.main}>
+          {item.title}
+        </a>
       </h3>
       <p className="mb-4 text-sm italic">{formatTime(item.time, item.end)}</p>
       <div className="mb-4 self-center">
