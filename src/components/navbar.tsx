@@ -21,17 +21,18 @@ export const Navbar = () => {
   return (
     <div className="mb-4">
       {routes.map((route) => (
-        <Link href={route.path} key={route.name}>
-          <a
-            className={`mr-4 text-body dark:text-body-dark ${
-              router.pathname == route.path
-                ? "text-highlight dark:text-highlight-dark"
-                : ""
-            }`}
-          >
-            {route.name}
-          </a>
-        </Link>
+        (<Link
+          href={route.path}
+          key={route.name}
+          className={`mr-4 text-body dark:text-body-dark ${
+            router.pathname == route.path
+              ? "text-highlight dark:text-highlight-dark"
+              : ""
+          }`}>
+
+          {route.name}
+
+        </Link>)
       ))}
     </div>
   );
