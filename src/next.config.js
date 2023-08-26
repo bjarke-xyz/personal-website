@@ -1,8 +1,6 @@
 module.exports = {
-  experimental: {
-    outputStandalone: true,
-  },
+  output: "standalone",
   images: {
-    loader: 'custom'
-  }
-}
+    loader: "custom",
+  },
+};
