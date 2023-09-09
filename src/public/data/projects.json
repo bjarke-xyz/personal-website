@@ -48,7 +48,7 @@
     },
     {
       "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Deployed using <a target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
-      "disabled": false,
+      "disabled": true,
       "images": [
         {
           "file": "timetracker.png",
@@ -61,8 +61,8 @@
       },
       "name": "Timetracker",
       "urls": {
-        "main": "https://timetracker.bjarke.xyz",
-        "github": "https://github.com/bjarke-xyz/timetracker"
+        "main": "https://div.bjarke.xyz/timetracker/",
+        "github": "https://github.com/bjarke-xyz/div/tree/main/src/timetracker"
       }
     },
     {
