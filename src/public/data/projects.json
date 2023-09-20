@@ -66,14 +66,14 @@
       }
     },
     {
-      "description": "Shows the weather forecast from multiple sources. Built using Cloudflare Pages and Cloudflare Pages Functions. Frontend is made with React and <a target=\"_blank\" href=\"https://watercss.kognise.dev/\">Water.css</a>.",
+      "description": "Shows the weather forecast from multiple sources. Built using Cloudflare Pages and Cloudflare Pages Functions. Frontend is made with React and Tailwind CSS.",
       "disabled": false,
-      "img": "va.png",
+      "img": "va2.png",
       "images": [
         {
-          "file": "va.png",
-          "width": 300,
-          "height": 231
+          "file": "va2.png",
+          "width": 280,
+          "height": 277
         }
       ],
       "dates": {
