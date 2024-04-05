@@ -24,3 +24,6 @@ go.work
 # output dir
 output/*
 !output/.gitkeep
+
+# go binary
+pw

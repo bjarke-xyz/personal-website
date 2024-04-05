@@ -1,3 +1,5 @@
 # personal-website
-![CI/CD Pipeline](https://github.com/bjarkt/personal-website/workflows/CI/CD%20Pipeline/badge.svg)
 
+See Makefile for how to run.
+
+`make buildAndServe` builds and serves files from the output directory

@@ -4,69 +4,36 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
-	"text/template"
+	"strings"
 )
 
 const outputDir = "output"
 const templateDir = "./templates/"
+const assetsDir = "./assets"
 
-type Page struct {
-	template *template.Template
-	data     any
-}
-
-type PageData struct {
-	Title string
-}
-
-var pages = map[string]*Page{
-	"index.html":    parsePage("index.html", PageData{Title: "Index!!"}),
-	"projects.html": parsePage("projects.html", PageData{Title: "projects :)"}),
-}
+const port = 3000
 
 func main() {
-	for k, v := range pages {
-		fullFilepath := fmt.Sprintf("%s/%s", outputDir, k)
-		filepathBase := filepath.Dir(fullFilepath)
-
-		if _, err := os.Stat(filepathBase); os.IsNotExist(err) {
-			if err := os.MkdirAll(outputDir, os.ModePerm); err != nil {
-				log.Fatal(err)
-				return
-			}
-		}
-
-		outputFile, err := os.Create(fullFilepath)
-		if err != nil {
-			log.Fatal(outputFile)
-			return
-		}
-		defer outputFile.Close()
-		err = v.template.ExecuteTemplate(outputFile, "base", v.data)
-		if err != nil {
-			log.Fatal(err)
-			return
-		}
+	if len(os.Args) < 2 {
+		fmt.Printf("commands: build, serve, buildandserve\n")
+		return
 	}
-
-	fmt.Println("Template executed successfully")
-}
-
-func parsePage(file string, data any) *Page {
-	filenames := []string{file, "base.html"}
-	templateFiles := make([]string, len(filenames))
-	for i, f := range filenames {
-		templateFiles[i] = fmt.Sprintf("%s/%s", templateDir, f)
+	var err error
+	cmd := strings.ToLower(os.Args[1])
+	switch cmd {
+	case "build":
+		err = build()
+	case "serve":
+		err = serve(port)
+	case "buildandserve":
+		err = build()
+		if err == nil {
+			err = serve(port)
+		}
+	default:
+		fmt.Println("unknown command")
 	}
-
-	tmpl, err := template.New("").ParseFiles(templateFiles...)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("%s failed: %v", cmd, err)
 	}
-	page := &Page{
-		template: tmpl,
-		data:     data,
-	}
-	return page
 }

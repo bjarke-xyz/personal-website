@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #fafafa;
+    --bg-muted-color: #F5F5F5;
+    --text-color: #525252;
+    --text-muted-color: #A3A3A3;
+}
+
+/* 
+TODO: dark mode
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #525252;
+        --bg-muted-color: #A3A3A3;
+        --text-color: #fafafa;
+        --text-muted-color: #F5F5F5;
+    }
+} */
+
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a,
+a:visited {
+    color: var(--text-color)
+}
+
+a:not(:hover) {
+    text-decoration: none;
+}
+
+a.with-underline {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.nav a {
+    color: var(--text-color);
+}
+
+.nav a:hover {
+    color: var(--text-muted-color);
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list .list-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__title {
+    margin: 0;
+}
+
+.project__dates {
+    font-style: italic;
+    font-size: small;
+}

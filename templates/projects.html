@@ -1,3 +1,37 @@
 {{define "content"}}
-I'm projects
+<div class="projects">
+
+    {{ range .Projects }}
+    <div class="project">
+        <h3 class="project__title">{{ .Name }}</h3>
+        <p class="project__dates">
+            <time datetime="{{ .Dates.From }}" title="{{ .Dates.From }}">{{ .Dates.From.Format "Jan 2006" }}</time>
+            {{if .Dates.To }}
+            - <time datetime="{{ .Dates.To }}" title="{{ .Dates.To }}">{{ .Dates.To.Format "Jan 2006" }}</time>
+            {{end}}
+        </p>
+        <div class="project__images">
+            {{ range .Images }}
+            <img loading="lazy" src="/assets/img/projects/{{ .File }}" height="{{ .Height }}" width="{{ .Width }}"
+                alt="{{ .Alt }}" />
+            {{ end }}
+        </div>
+        <p class="project__description">
+            {{ .Description }}
+        </p>
+        <ul class="list">
+            {{ if .Urls.Main }}
+            <li>
+                <a href="{{.Urls.Main}}">{{ .Urls.Main }}</a>
+            </li>
+            {{ end }}
+            {{ if .Urls.Github }}
+            <li>
+                <a href="{{.Urls.Github}}">{{ .Urls.Github }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</div>
 {{end}}

@@ -1,0 +1,184 @@
+{
+    "websites": [
+        {
+            "description": "Re-creation of <a class='with-underline' target='_blank' href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Scrapes danish news sites and makes titles searchable using <a class='with-underline' target='_blank' href='https://github.com/blevesearch/bleve'>bleve</a>.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "rasende2.png",
+                    "width": 335,
+                    "height": 327,
+                    "alt": "Screenshot of rasende2"
+                }
+            ],
+            "dates": {
+                "from": "2022-07-14T12:00:00+02:00"
+            },
+            "name": "Rasende2",
+            "urls": {
+                "main": "https://rasende.bjarke.xyz",
+                "github": "https://github.com/bjarke-xyz/rasende2-api"
+            }
+        },
+        {
+            "description": "HTTP API and frontend for getting fuel prices. The API returns todays, yesterdays, and tomorrows price, and a translated message (danish or english) describing the prices. Created to be used together with an iOS shortcut/Siri, so it can be used while driving. The frontend consumes the API to create the yesterday/today/tomorrow view, which also displays if the price has changed during the day. See GitHub README for more information.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "fuelprices-curl.png",
+                    "width": 335,
+                    "height": 327,
+                    "alt": "Screenshot of curl output"
+                },
+                {
+                    "file": "fuelprices-website.png",
+                    "width": 335,
+                    "height": 327,
+                    "alt": "Screenshot of fuelprices website"
+                }
+            ],
+            "dates": {
+                "from": "2021-11-17T20:48:00+01:00"
+            },
+            "name": "Fuelprices",
+            "urls": {
+                "main": "https://fuelprices.bjarke.xyz",
+                "github": "https://github.com/bjarke-xyz/fuelprices-api"
+            }
+        },
+        {
+            "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Deployed using <a class='with-underline' target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
+            "disabled": true,
+            "images": [
+                {
+                    "file": "timetracker.png",
+                    "width": 383,
+                    "height": 316
+                }
+            ],
+            "dates": {
+                "from": "2021-04-16T18:22:00+02:00"
+            },
+            "name": "Timetracker",
+            "urls": {
+                "main": "https://div.bjarke.xyz/timetracker/",
+                "github": "https://github.com/bjarke-xyz/div/tree/main/src/timetracker"
+            }
+        },
+        {
+            "description": "Shows the weather forecast from multiple sources. Built using Cloudflare Pages and Cloudflare Pages Functions. Frontend is made with React and Tailwind CSS.",
+            "disabled": false,
+            "img": "va2.png",
+            "images": [
+                {
+                    "file": "va2.png",
+                    "width": 280,
+                    "height": 277
+                }
+            ],
+            "dates": {
+                "from": "2020-06-27T21:18:00+02:00"
+            },
+            "name": "Vejr Aggregator",
+            "urls": {
+                "main": "https://div.bjarke.xyz/va/",
+                "github": "https://github.com/bjarke-xyz/div/tree/main/src/va"
+            }
+        },
+        {
+            "description": "This website! Made using plain HTML and CSS, and a tiny bit of Go to produce the HTML files with a folder structure that makes the URL's look nice. No JavaScript :). Deployed using <a class='with-underline' target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "personalWebsite2.png",
+                    "width": 477,
+                    "height": 369
+                }
+            ],
+            "dates": {
+                "from": "2019-04-30T21:51:00+02:00"
+            },
+            "name": "Personal Website",
+            "urls": {
+                "main": "https://bjarke.xyz",
+                "github": "https://github.com/bjarke-xyz/personal-website"
+            }
+        },
+        {
+            "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and now written in TypeScript. Frontend is created using Angular.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "slv4Ny.png",
+                    "width": 198,
+                    "height": 402
+                }
+            ],
+            "dates": {
+                "from": "2019-03-14T19:06:00+01:00"
+            },
+            "name": "Shopping List",
+            "urls": {
+                "main": "https://slv4.bjarke.xyz/",
+                "github": "https://github.com/bjarke-xyz/shoppinglist-api"
+            }
+        },
+        {
+            "description": "Info screen for popular cryptocurrencies. Written in nodejs and express, using pug as templating language. Using the <a class='with-underline' target=\"_blank\" href=\"https://min-api.cryptocompare.com/\">cryptocompare api</a>. Deployed using <del><a class='with-underline' target=\"_blank\" href=\"https://www.heroku.com/home\">Heroku</a></del> <a class='with-underline' target=\"_blank\" href=\"https://fly.io\">Fly.io</a>.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "kryptoinfo.png",
+                    "width": 300,
+                    "height": 292
+                }
+            ],
+            "dates": {
+                "from": "2017-12-27T22:30:00+01:00",
+                "to": "2018-08-08T22:10:00+02:00"
+            },
+            "name": "crypto_info",
+            "urls": {
+                "main": "https://crypto-info.fly.dev/coins"
+            }
+        },
+        {
+            "description": "Website featuring a gallery of the owner's painted pictures, various audio files, and more. Also includes an admin panel for managing the image gallery and audio files. Techonologies used: PHP/Laravel, MySQL.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "clairvoyanceogkunst_ny.png",
+                    "width": 300,
+                    "height": 230
+                }
+            ],
+            "dates": {
+                "from": "2013-11-17T18:35:00+01:00",
+                "to": "2022-06-14T10:19:00+02:00"
+            },
+            "name": "Clairvoyance og kunst",
+            "urls": {
+                "main": "https://web.archive.org/web/20220704155603/https://www.clairvoyanceogkunst.dk/"
+            }
+        },
+        {
+            "description": "Website for a bed-and-kitchen in Esbjerg. Initially created using only HTML, CSS and JS, later re-written using a home made MVC framework in PHP, then re-written again to use the PHP framework Laravel. The website featured a booking calendar, that displayed both the bookings made directly to the owner, and also bookings made on Airbnb, by parsing Airbnbs iCal data. The calendar and the owners private dashboard were made using Vue.js. No longer online.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "overnatning.png",
+                    "width": 300,
+                    "height": 292
+                }
+            ],
+            "dates": {
+                "from": "2014-02-20T17:51:00+01:00",
+                "to": "2020-03-01T12:00:00+01:00"
+            },
+            "name": "Overnatning i Esbjerg",
+            "urls": {
+                "main": "https://web.archive.org/web/20200131000531/http://overnatningiesbjerg.dk:80/"
+            }
+        }
+    ]
+}
