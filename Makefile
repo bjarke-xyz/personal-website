@@ -12,6 +12,7 @@ clean:
 
 build: clean gobuild
 	./pw build
+	cp _headers output
 
 serve: gobuild
 	./pw serve
