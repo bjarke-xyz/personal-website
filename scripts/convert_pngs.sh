@@ -10,7 +10,7 @@ cd $(pwd)
 
 shopt -s nullglob nocaseglob extglob
 
-dir="assets/img/projects"
+dir="public/assets/img/projects"
 pushd $dir
 for FILE in *.@(jpg|jpeg|tif|tiff|png); do 
    cwebp $PARAMS "$dir/$FILE" -o "$dir/${FILE%.*}".webp;

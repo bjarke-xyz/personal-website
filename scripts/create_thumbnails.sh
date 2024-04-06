@@ -4,7 +4,7 @@
 # Sets the desired thumbnail width
 WIDTH=600
 shopt -s dotglob
-dir="$(pwd)/assets/img/projects"
+dir="$(pwd)/public/assets/img/projects"
 pushd $dir
 for i in *.webp
 do
