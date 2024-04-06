@@ -6,7 +6,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"os/exec"
 	"path/filepath"
 	"text/template"
 	"time"
@@ -30,12 +29,6 @@ var pages = map[string]*Page{
 	"/":          parsePage("index.html", PageData{Title: "Hi 👋 | Bjarke"}),
 	"/projects/": parsePage("projects.html", ProjectsData{PageData: PageData{Title: "Projects | Bjarke"}, Projects: mustLoadProjects()}),
 	"/contact/":  parsePage("contact.html", PageData{Title: "Contact | Bjarke"}),
-}
-
-func copyAssets() error {
-	// TODO: this is dumb lol
-	cmd := exec.Command("cp", "-r", assetsDir, outputDir)
-	return cmd.Run()
 }
 
 func parsePage(file string, data any) *Page {
@@ -80,11 +73,6 @@ func build() error {
 		if err != nil {
 			return fmt.Errorf("failed to execute template: %w", err)
 		}
-	}
-
-	err := copyAssets()
-	if err != nil {
-		return fmt.Errorf("failed to copy assets: %w", err)
 	}
 
 	return nil

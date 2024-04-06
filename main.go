@@ -9,7 +9,6 @@ import (
 
 const outputDir = "output"
 const templateDir = "./templates/"
-const assetsDir = "./assets"
 
 const port = 3000
 

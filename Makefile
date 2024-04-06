@@ -12,8 +12,7 @@ clean:
 
 build: clean gobuild
 	./pw build
-	cp _headers output
-	cp robots.txt output
+	cp -r public/* output
 
 serve: gobuild
 	./pw serve
