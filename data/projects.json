@@ -5,7 +5,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "rasende2.png",
+                    "file": "rasende2.webp",
                     "width": 335,
                     "height": 327,
                     "alt": "Screenshot of rasende2"
@@ -25,13 +25,13 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "fuelprices-curl.png",
+                    "file": "fuelprices-curl.webp",
                     "width": 335,
                     "height": 327,
                     "alt": "Screenshot of curl output"
                 },
                 {
-                    "file": "fuelprices-website.png",
+                    "file": "fuelprices-website.webp",
                     "width": 335,
                     "height": 327,
                     "alt": "Screenshot of fuelprices website"
@@ -51,7 +51,7 @@
             "disabled": true,
             "images": [
                 {
-                    "file": "timetracker.png",
+                    "file": "timetracker.webp",
                     "width": 383,
                     "height": 316
                 }
@@ -68,10 +68,10 @@
         {
             "description": "Shows the weather forecast from multiple sources. Built using Cloudflare Pages and Cloudflare Pages Functions. Frontend is made with React and Tailwind CSS.",
             "disabled": false,
-            "img": "va2.png",
+            "img": "va2.webp",
             "images": [
                 {
-                    "file": "va2.png",
+                    "file": "va2.webp",
                     "width": 280,
                     "height": 277
                 }
@@ -90,7 +90,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "personalWebsite2.png",
+                    "file": "personalWebsite2.webp",
                     "width": 477,
                     "height": 369
                 }
@@ -109,7 +109,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "slv4Ny.png",
+                    "file": "slv4Ny.webp",
                     "width": 198,
                     "height": 402
                 }
@@ -128,7 +128,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "kryptoinfo.png",
+                    "file": "kryptoinfo.webp",
                     "width": 300,
                     "height": 292
                 }
@@ -147,7 +147,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "clairvoyanceogkunst_ny.png",
+                    "file": "clairvoyanceogkunst_ny.webp",
                     "width": 300,
                     "height": 230
                 }
@@ -166,7 +166,7 @@
             "disabled": false,
             "images": [
                 {
-                    "file": "overnatning.png",
+                    "file": "overnatning.webp",
                     "width": 300,
                     "height": 292
                 }
