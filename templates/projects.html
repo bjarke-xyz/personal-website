@@ -12,8 +12,10 @@
         </p>
         <div class="project__images">
             {{ range .Images }}
-            <img loading="lazy" src="/assets/img/projects/{{ .File }}" height="{{ .Height }}" width="{{ .Width }}"
-                alt="{{ .Alt }}" />
+            <a target="_blank" href="/assets/img/projects/{{ .File }}" alt="{{ .Alt }}">
+                <img loading="lazy" src="/assets/img/projects/thumb-{{ .File }}" width="{{ .Width }}"
+                    height="{{ .Height }}" alt="{{ .Alt }}" />
+            </a>
             {{ end }}
         </div>
         <p class="project__description">

@@ -6,8 +6,8 @@
             "images": [
                 {
                     "file": "rasende2.webp",
-                    "width": 335,
-                    "height": 327,
+                    "width": 600,
+                    "height": 520,
                     "alt": "Screenshot of rasende2"
                 }
             ],
@@ -26,14 +26,14 @@
             "images": [
                 {
                     "file": "fuelprices-curl.webp",
-                    "width": 335,
-                    "height": 327,
+                    "width": 600,
+                    "height": 586,
                     "alt": "Screenshot of curl output"
                 },
                 {
                     "file": "fuelprices-website.webp",
-                    "width": 335,
-                    "height": 327,
+                    "width": 600,
+                    "height": 585,
                     "alt": "Screenshot of fuelprices website"
                 }
             ],
@@ -52,8 +52,9 @@
             "images": [
                 {
                     "file": "timetracker.webp",
-                    "width": 383,
-                    "height": 316
+                    "width": 600,
+                    "height": 495,
+                    "alt": "Screenshot of timetracker"
                 }
             ],
             "dates": {
@@ -72,8 +73,9 @@
             "images": [
                 {
                     "file": "va2.webp",
-                    "width": 280,
-                    "height": 277
+                    "width": 600,
+                    "height": 565,
+                    "alt": "Screenshot of va"
                 }
             ],
             "dates": {
@@ -91,8 +93,9 @@
             "images": [
                 {
                     "file": "personalWebsite2.webp",
-                    "width": 477,
-                    "height": 369
+                    "width": 600,
+                    "height": 465,
+                    "alt": "Screenshot of my personal website"
                 }
             ],
             "dates": {
@@ -110,8 +113,9 @@
             "images": [
                 {
                     "file": "slv4Ny.webp",
-                    "width": 198,
-                    "height": 402
+                    "width": 600,
+                    "height": 1217,
+                    "alt": "Screenshot of the list view of the shopping list application"
                 }
             ],
             "dates": {
@@ -129,8 +133,9 @@
             "images": [
                 {
                     "file": "kryptoinfo.webp",
-                    "width": 300,
-                    "height": 292
+                    "width": 600,
+                    "height": 583,
+                    "alt": "Screenshot of crypto info"
                 }
             ],
             "dates": {
@@ -148,8 +153,9 @@
             "images": [
                 {
                     "file": "clairvoyanceogkunst_ny.webp",
-                    "width": 300,
-                    "height": 230
+                    "width": 600,
+                    "height": 459,
+                    "alt": "Screenshot of website"
                 }
             ],
             "dates": {
@@ -167,8 +173,9 @@
             "images": [
                 {
                     "file": "overnatning.webp",
-                    "width": 300,
-                    "height": 292
+                    "width": 600,
+                    "height": 584,
+                    "alt": "Screenshot of website"
                 }
             ],
             "dates": {

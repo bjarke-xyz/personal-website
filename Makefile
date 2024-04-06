@@ -19,3 +19,9 @@ serve: gobuild
 
 buildAndServe: clean gobuild
 	./pw buildAndServe
+
+clean-thumbnails:
+	rm -f ./assets/img/projects/thumb-*
+
+thumbnails: clean-thumbnails
+	./scripts/create_thumbnails.sh
