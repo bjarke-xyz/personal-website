@@ -43,7 +43,7 @@
             "name": "Fuelprices",
             "urls": {
                 "main": "https://fuelprices.bjarke.xyz",
-                "github": "https://github.com/bjarke-xyz/fuelprices-api"
+                "github": "https://github.com/bjarke-xyz/fuelprices"
             }
         },
         {
