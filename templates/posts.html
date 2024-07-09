@@ -1,0 +1,8 @@
+{{define "content"}}
+<p>posts :) Just testing for now, no real content</p>
+{{ range .Posts }}
+<p>
+    <a href="/{{ .Path }}">{{ .Name }}</a>
+</p>
+{{ end }}
+{{end}}

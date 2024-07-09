@@ -12,7 +12,6 @@ clean:
 
 build: clean gobuild
 	./pw build
-	cp -r public/* output
 
 serve: gobuild
 	./pw serve
