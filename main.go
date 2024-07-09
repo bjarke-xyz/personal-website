@@ -1,9 +1,9 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
-	"os"
 	"strings"
 )
 
@@ -13,21 +13,23 @@ const templateDir = "./templates/"
 const port = 3000
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Printf("commands: build, serve, buildandserve\n")
-		return
-	}
+	cmd := ""
+	verbose := false
+	flag.StringVar(&cmd, "command", "", "Command to run. Options are: build, serve, buildAndServe")
+	flag.BoolVar(&verbose, "verbose", false, "Verbose output")
+	flag.Parse()
+
+	cmd = strings.ToLower(cmd)
 	var err error
-	cmd := strings.ToLower(os.Args[1])
 	switch cmd {
 	case "build":
-		err = build()
+		err = build(verbose)
 	case "serve":
-		err = serve(port)
+		err = serve(port, verbose)
 	case "buildandserve":
-		err = build()
+		err = build(verbose)
 		if err == nil {
-			err = serve(port)
+			err = serve(port, verbose)
 		}
 	default:
 		fmt.Println("unknown command")

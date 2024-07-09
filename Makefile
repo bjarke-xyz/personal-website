@@ -11,13 +11,13 @@ clean:
 	touch output/.gitkeep
 
 build: clean gobuild
-	./pw build
+	./pw --command build --verbose
 
 serve: gobuild
-	./pw serve
+	./pw --command serve --verbose
 
 buildAndServe: clean gobuild
-	./pw buildAndServe
+	./pw --command buildAndServe --verbose
 
 clean-thumbnails:
 	rm -f ./assets/img/projects/thumb-*

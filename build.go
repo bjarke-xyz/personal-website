@@ -77,7 +77,7 @@ func buildRoutes() map[string]*Page {
 	return pages
 }
 
-func build() error {
+func build(verbose bool) error {
 	pages := buildRoutes()
 	for k, v := range pages {
 		hasExt := filepath.Ext(k) != ""
@@ -102,10 +102,12 @@ func build() error {
 		if err != nil {
 			return fmt.Errorf("failed to execute template: %w", err)
 		}
-		log.Printf("Created file %v", outputFile.Name())
+		if verbose {
+			log.Printf("Created file %v", outputFile.Name())
+		}
 	}
 
-	err := copyDir("./public", "./output")
+	err := copyDir("./public", "./output", verbose)
 	if err != nil {
 		return fmt.Errorf("error copying public directory: %w", err)
 	}
@@ -195,7 +197,7 @@ func loadPosts() ([]*PostPage, error) {
 	return postPages, nil
 }
 
-func copyDir(srcDir string, destDir string) error {
+func copyDir(srcDir string, destDir string, verbose bool) error {
 	srcDirEntries, err := os.ReadDir(srcDir)
 	if err != nil {
 		return fmt.Errorf("error reading dir of %v: %w", srcDir, err)
@@ -210,7 +212,7 @@ func copyDir(srcDir string, destDir string) error {
 					return fmt.Errorf("error creating dir at %v: %w", newDestDir, err)
 				}
 			}
-			err = copyDir(newSrcDir, newDestDir)
+			err = copyDir(newSrcDir, newDestDir, verbose)
 			if err != nil {
 				return fmt.Errorf("error copying dir %v: %w", newSrcDir, err)
 			}
@@ -231,7 +233,9 @@ func copyDir(srcDir string, destDir string) error {
 			if err != nil {
 				return fmt.Errorf("error writing to dest file %v: %w", destPath, err)
 			}
-			log.Printf("Copied file to %v", destPath)
+			if verbose {
+				log.Printf("Copied file to %v", destPath)
+			}
 		}
 	}
 	return nil
