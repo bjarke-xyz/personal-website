@@ -1,7 +1,7 @@
 {
     "websites": [
         {
-            "description": "Re-creation of <a class='with-underline' target='_blank' href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Scrapes danish news sites and makes titles searchable using <a class='with-underline' target='_blank' href='https://github.com/blevesearch/bleve'>bleve</a>.",
+            "description": "Re-creation of <a class='with-underline' target='_blank' href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Parses danish news sites RSS feeds and makes titles searchable using <a class='with-underline' target='_blank' href='https://github.com/blevesearch/bleve'>bleve</a>. Uses generative AI to create fake news.",
             "disabled": false,
             "images": [
                 {
@@ -17,7 +17,7 @@
             "name": "Rasende2",
             "urls": {
                 "main": "https://rasende.bjarke.xyz",
-                "github": "https://github.com/bjarke-xyz/rasende2-api"
+                "github": "https://github.com/bjarke-xyz/rasende2"
             }
         },
         {
