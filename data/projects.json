@@ -1,6 +1,26 @@
 {
     "websites": [
         {
+            "description": "Daily puzzle game similar to other -dle games (like Wordle). Guess the price of a danish grocery store item. Inspired by <a class='with-underline' target='_blank' href='https://costcodle.com'>costcodle.com</a>",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "prisdle.webp",
+                    "width": 600,
+                    "height": 781,
+                    "alt": "Screenshot of prisdle"
+                }
+            ],
+            "dates": {
+                "from": "2024-09-05T19:50:11+02:00"
+            },
+            "name": "Pris Gæt",
+            "urls": {
+                "main": "https://prisget.bjarke.xyz",
+                "github": "https://github.com/bjarke-xyz/prisdle"
+            }
+        },
+        {
             "description": "Re-creation of <a class='with-underline' target='_blank' href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Parses danish news sites RSS feeds and makes titles searchable using <a class='with-underline' target='_blank' href='https://github.com/blevesearch/bleve'>bleve</a>. Uses generative AI to create fake news.",
             "disabled": false,
             "images": [

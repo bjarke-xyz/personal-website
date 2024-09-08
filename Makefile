@@ -16,7 +16,7 @@ build: clean gobuild
 serve: gobuild
 	./pw --command serve --verbose
 
-buildAndServe: clean gobuild
+dev: clean gobuild
 	./pw --command buildAndServe --verbose
 
 clean-thumbnails:

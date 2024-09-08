@@ -11,7 +11,7 @@ do
     # Stores the width of the current file
     file="$dir/$i"
     iwidth=`identify -format "%w" $file`
-    if [[ $i != *-thumb.png ]] && [ $iwidth -gt $WIDTH ]
+    if [[ $i != thumb-*.webp ]] && [ $iwidth -gt $WIDTH ]
     then
         # Creates thumbnail and adds -thumb to end of new file
         convert -thumbnail ${WIDTH}x $file "$dir/thumb-$i"
