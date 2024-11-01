@@ -21,6 +21,27 @@
             }
         },
         {
+            "description": "GraphQL API for a recipe website. Created using C# and the <a class='with-underline' target='_blank' href='https://chillicream.com/docs/hotchocolate/'>Hot Chocolate</a> GraphQL framework. The NoSQL document database Firestore was used as a database, and Google Cloud Storage was used for image storage. Integrated with PartnerAds and Adtraction to support affiliate marketing, enabling features like linking to cooking equipment in recipes. Built in collaboration with a friend, who worked on the  <a class='with-underline' target='_blank' href='https://gastrik.dk'>frontend</a>.",
+            "disabled": false,
+            "images": [
+                {
+                    "file": "recipesapi.webp",
+                    "width": 600,
+                    "height": 531,
+                    "alt": "Screenshot of a GraphQL query"
+                }
+            ],
+            "dates": {
+                "from": "2022-10-23T21:35:25+02:00",
+                "to": "2024-09-03T20:10:57+02:00"
+            },
+            "name": "Recipes API",
+            "urls": {
+                "main": "https://recipesapi.bjarke.xyz",
+                "github": "https://github.com/bjarke-xyz/recipesapi"
+            }
+        },
+        {
             "description": "Re-creation of <a class='with-underline' target='_blank' href='https://web.archive.org/web/20200628061846/https://rasende.dk/'>rasende.dk</a>. Parses danish news sites RSS feeds and makes titles searchable using <a class='with-underline' target='_blank' href='https://github.com/blevesearch/bleve'>bleve</a>. Uses generative AI to create fake news.",
             "disabled": false,
             "images": [
