@@ -156,7 +156,13 @@ func loadProjects() ([]Project, error) {
 	if err != nil {
 		return projects.Websites, fmt.Errorf("failed to unmarshal project to json: %v", err)
 	}
-	return projects.Websites, nil
+	websites := make([]Project, 0, len(projects.Websites))
+	for _, website := range projects.Websites {
+		if !website.Disabled {
+			websites = append(websites, website)
+		}
+	}
+	return websites, nil
 }
 func mustLoadProjects() []Project {
 	projects, err := loadProjects()
