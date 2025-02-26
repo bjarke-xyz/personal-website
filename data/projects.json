@@ -150,7 +150,7 @@
     },
     {
       "description": "Shopping list app/website, that remembers what you write, and autocompletes it next time you add it. API was initially written in ASP.NET Core, later rewritten in Go, and now written in TypeScript. Frontend is created using Angular.",
-      "disabled": false,
+      "disabled": true,
       "images": [
         {
           "file": "slv4Ny.webp",
