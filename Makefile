@@ -10,6 +10,12 @@ clean:
 	rm -rf output/*
 	touch output/.gitkeep
 
+dockerbuild: clean
+	docker build -t bjarkt.xyz/personal-website -f build.Dockerfile .
+	docker create --name personal-website bjarkt.xyz/personal-website
+	docker cp personal-website:/app/output/. ./output/
+	docker rm personal-website
+
 build: clean gobuild
 	./pw --command build --verbose
 
