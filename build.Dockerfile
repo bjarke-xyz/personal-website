@@ -1,4 +1,6 @@
-FROM docker.io/golang:1.23
+FROM docker.io/golang:1.23-alpine
+
+RUN apk add --no-cache make
 
 WORKDIR /app
 
