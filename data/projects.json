@@ -88,7 +88,7 @@
       }
     },
     {
-      "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Deployed using <a class='with-underline' target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
+      "description": "Simple time tracking application, for tracking how much time has been spent doing what tasks. Created with React and TypeScript. Data is persisted to localStorage, so it is not lost when restarting the browser or computer. Hosted on <a class='with-underline' target=\"_blank\" href=\"https://www.hetzner.com\">Hetzner</a>.",
       "disabled": true,
       "images": [
         {
@@ -108,7 +108,7 @@
       }
     },
     {
-      "description": "Shows the weather forecast from multiple sources. Built using Cloudflare Pages and Cloudflare Pages Functions. Frontend is made with React and Tailwind CSS.",
+      "description": "Shows the weather forecast from multiple sources. Built using React and Hono. Frontend is made with React and Tailwind CSS.",
       "disabled": false,
       "img": "va2.webp",
       "images": [
@@ -125,11 +125,11 @@
       "name": "Vejr Aggregator",
       "urls": {
         "main": "https://div.bjarke.xyz/va/",
-        "github": "https://github.com/bjarke-xyz/div/tree/main/src/va"
+        "github": "https://github.com/bjarke-xyz/div/tree/main/frontend/va"
       }
     },
     {
-      "description": "This website! Made using plain HTML and CSS, and a tiny bit of Go to produce the HTML files with a folder structure that makes the URL's look nice. No JavaScript :). Deployed using <a class='with-underline' target=\"_blank\" href=\"https://pages.cloudflare.com/\">Cloudflare Pages</a>.",
+      "description": "This website! Made using plain HTML and CSS, and a tiny bit of Go to produce the HTML files with a folder structure that makes the URL's look nice. No JavaScript :). Hosted on <a class='with-underline' target=\"_blank\" href=\"https://www.hetzner.com/\">Hetzner</a>.",
       "disabled": false,
       "images": [
         {
