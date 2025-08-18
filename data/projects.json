@@ -21,7 +21,7 @@
       }
     },
     {
-      "description": "GraphQL API for a recipe website. Created using C# and the <a class='with-underline' target='_blank' href='https://chillicream.com/docs/hotchocolate/'>Hot Chocolate</a> GraphQL framework. The NoSQL document database Firestore was used as a database, and Google Cloud Storage was used for image storage. Integrated with PartnerAds and Adtraction to support affiliate marketing, enabling features like linking to cooking equipment in recipes. Built in collaboration with a friend, who worked on the  <a class='with-underline' target='_blank' href='https://gastrik.dk'>frontend</a>.",
+      "description": "GraphQL API for a recipe website. Created using C# and the <a class='with-underline' target='_blank' href='https://chillicream.com/docs/hotchocolate/'>Hot Chocolate</a> GraphQL framework. The NoSQL document database Firestore was used as a database, and Google Cloud Storage was used for image storage. Integrated with PartnerAds and Adtraction to support affiliate marketing, enabling features like linking to cooking equipment in recipes. Built in collaboration with a friend, who worked on the frontend.",
       "disabled": false,
       "images": [
         {
@@ -29,6 +29,12 @@
           "width": 600,
           "height": 531,
           "alt": "Screenshot of a GraphQL query"
+        },
+        {
+          "file": "gastrik.webp",
+          "width": 600,
+          "height": 538,
+          "alt": "Screenshot of gastrik frontend"
         }
       ],
       "dates": {
@@ -37,7 +43,6 @@
       },
       "name": "Recipes API",
       "urls": {
-        "main": "https://recipesapi.bjarke.xyz",
         "github": "https://github.com/bjarke-xyz/recipesapi"
       }
     },
